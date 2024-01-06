@@ -1,0 +1,8 @@
+{
+  "pl": {
+    "navigation": ["O mnie", "Oferta", "Projekty", "Kontakt"]
+  },
+  "en": {
+    "navigation": ["About", "Services", "Work", "Contact"]
+  }
+}
