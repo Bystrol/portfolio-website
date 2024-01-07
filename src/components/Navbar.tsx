@@ -7,7 +7,6 @@ import { CgClose } from 'react-icons/cg'
 import { Unbounded } from 'next/font/google'
 import scrollToSection from '@/utils/functions/scrollToSection'
 import useLanguageSwitch from '@/hooks/useLanguageSwitch'
-import ContainerLayout from '../layouts/ContainerLayout'
 import CircularButton from './CircularButton'
 import PolishIcon from '../../public/images/polish-icon.png'
 import EnglishIcon from '../../public/images/english-icon.png'
@@ -28,7 +27,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] lg:px-[60px] lg:py-[20px] xl:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur">
-        <ContainerLayout>
+        <div className="flex justify-between items-center w-full max-w-[1440px] gap-[20px]">
           <h1
             className={`text-[18px] xl:text-[22px] ${unbounded.className} uppercase`}
           >
@@ -64,12 +63,12 @@ export default function Navbar() {
                 activeBoxShadow="0 0 2px 3px #5035DA"
                 uncheckedIcon={
                   <div className="w-full h-full flex justify-end items-center pr-1">
-                    <Image src={EnglishIcon} alt="English flag" />
+                    <Image src={EnglishIcon} alt="English flag" quality={100} />
                   </div>
                 }
                 checkedIcon={
                   <div className="w-full h-full flex justify-start items-center pl-1">
-                    <Image src={PolishIcon} alt="Polish flag" />
+                    <Image src={PolishIcon} alt="Polish flag" quality={100} />
                   </div>
                 }
               />
@@ -79,12 +78,12 @@ export default function Navbar() {
               icon={isNavigationVisible ? CgClose : FaBars}
             />
           </div>
-        </ContainerLayout>
+        </div>
       </header>
       <nav
         className={`lg:hidden fixed top-[60px] ${
           isNavigationVisible ? 'left-0' : 'left-full'
-        } flex items-end w-full h-screen bg-light-black/[.03] backdrop-blur pb-[140px] pl-[30px] transition-all duration-200`}
+        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[120px] pl-[30px] transition-all duration-200`}
       >
         <ul className="flex flex-col gap-[20px]">
           {translation.navigation.map((navItem, index) => {
