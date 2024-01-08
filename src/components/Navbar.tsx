@@ -2,23 +2,32 @@
 
 import { useState } from 'react'
 import Switch from 'react-switch'
-import { FaBars } from 'react-icons/fa6'
-import { CgClose } from 'react-icons/cg'
 import { Unbounded } from 'next/font/google'
+import Image from 'next/image'
 import scrollToSection from '@/utils/functions/scrollToSection'
-import useLanguageSwitch from '@/hooks/useLanguageSwitch'
 import CircularButton from './CircularButton'
 import PolishIcon from '../../public/images/polish-icon.png'
 import EnglishIcon from '../../public/images/english-icon.png'
-import Image from 'next/image'
+import BarsIcon from './svg/BarsIcon'
+import CloseIcon from './svg/CloseIcon'
+import { Translation } from '@/types/translation'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
 
-export default function Navbar() {
+type NavbarProps = {
+  translation: Translation
+  switchChecked: boolean
+  toggleSwitch: () => void
+}
+
+export default function Navbar({
+  translation,
+  switchChecked,
+  toggleSwitch
+}: NavbarProps) {
   const [isNavigationVisible, setIsNavigationVisible] = useState<boolean>(false)
-  const { translation, switchChecked, toggleSwitch } = useLanguageSwitch()
 
   const toggleNavigation = () => {
     setIsNavigationVisible((prevIsVisible) => !prevIsVisible)
@@ -26,21 +35,21 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] lg:px-[60px] lg:py-[20px] xl:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur">
+      <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10">
         <div className="flex justify-between items-center w-full max-w-[1440px] gap-[20px]">
           <h1
-            className={`text-[18px] xl:text-[22px] ${unbounded.className} uppercase`}
+            className={`text-[18px] lg:text-[22px] ${unbounded.className} uppercase`}
           >
             Michał Bystryk
           </h1>
-          <div className="flex gap-[20px]">
-            <nav className="hidden lg:block">
-              <ul className="flex gap-[20px]">
+          <div className="flex items-center gap-[20px]">
+            <nav className="hidden sm:block">
+              <ul className="flex items-center gap-[20px]">
                 {translation.navigation.map((navItem, index) => {
                   return (
                     <li
                       key={index}
-                      className="text-[18px] cursor-pointer hover:drop-shadow-blue transition-all duration-200"
+                      className="text-[14px] lg:text-[18px] cursor-pointer hover:drop-shadow-blue hover:-translate-y-[2px] transition-all duration-200"
                       onClick={() => scrollToSection(index)}
                     >
                       {navItem}
@@ -63,27 +72,41 @@ export default function Navbar() {
                 activeBoxShadow="0 0 2px 3px #5035DA"
                 uncheckedIcon={
                   <div className="w-full h-full flex justify-end items-center pr-1">
-                    <Image src={EnglishIcon} alt="English flag" quality={100} />
+                    <Image
+                      src={EnglishIcon}
+                      alt="English flag"
+                      quality={100}
+                      width={20}
+                      height={20}
+                    />
                   </div>
                 }
                 checkedIcon={
                   <div className="w-full h-full flex justify-start items-center pl-1">
-                    <Image src={PolishIcon} alt="Polish flag" quality={100} />
+                    <Image
+                      src={PolishIcon}
+                      alt="Polish flag"
+                      quality={100}
+                      width={20}
+                      height={20}
+                    />
                   </div>
                 }
               />
             </div>
-            <CircularButton
-              handleClick={toggleNavigation}
-              icon={isNavigationVisible ? CgClose : FaBars}
-            />
+            <div className="sm:hidden">
+              <CircularButton
+                handleClick={toggleNavigation}
+                icon={isNavigationVisible ? CloseIcon : BarsIcon}
+              />
+            </div>
           </div>
         </div>
       </header>
       <nav
         className={`lg:hidden fixed top-[60px] ${
           isNavigationVisible ? 'left-0' : 'left-full'
-        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[120px] pl-[30px] transition-all duration-200`}
+        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[120px] pl-[30px] transition-all duration- z-10`}
       >
         <ul className="flex flex-col gap-[20px]">
           {translation.navigation.map((navItem, index) => {
@@ -91,7 +114,10 @@ export default function Navbar() {
               <li
                 key={index}
                 className="text-[36px] cursor-pointer hover:drop-shadow-blue transition-all duration-200"
-                onClick={() => scrollToSection(index)}
+                onClick={() => {
+                  scrollToSection(index)
+                  setIsNavigationVisible(false)
+                }}
               >
                 {navItem}
               </li>
