@@ -11,7 +11,11 @@ const unbounded = Unbounded({
   subsets: ['latin']
 })
 
-export default function HeroSection({ translation }: Translation) {
+type HeroSectionProps = {
+  translation: Translation
+}
+
+export default function HeroSection({ translation }: HeroSectionProps) {
   return (
     <section className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.png')] sm:bg-[url('../../public/images/mesh-gradient-tablet.png')] lg:bg-[url('../../public/images/mesh-gradient-desktop.png')] bg-cover bg-no-repeat bg-right">
       <SmallVector />
