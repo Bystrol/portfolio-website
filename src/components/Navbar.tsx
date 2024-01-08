@@ -49,7 +49,7 @@ export default function Navbar({
                   return (
                     <li
                       key={index}
-                      className="text-[14px] lg:text-[18px] cursor-pointer hover:drop-shadow-blue hover:-translate-y-[px] transition-all duration-200"
+                      className="text-[14px] lg:text-[18px] cursor-pointer hover:drop-shadow-blue hover:-translate-y-[2px] transition-all duration-200"
                       onClick={() => scrollToSection(index)}
                     >
                       {navItem}
