@@ -1,8 +1,22 @@
 {
   "pl": {
-    "navigation": ["O mnie", "Oferta", "Projekty", "Kontakt"]
+    "navigation": ["O mnie", "Oferta", "Projekty", "Kontakt"],
+    "hero": {
+      "heading": "Cześć! Miło Cię gościć w moim portfolio",
+      "paragraph": "Jestem inżynierem z rocznym doświadczeniem komercyjnym jako front-end developer. Obecnie szukam pełnej szans do rozwoju pracy na stanowisku front-end/full-stack developera.",
+      "button": "Napisz do mnie",
+      "availability_first": "Dostępny",
+      "availability_second": "od zaraz"
+    }
   },
   "en": {
-    "navigation": ["About", "Services", "Work", "Contact"]
+    "navigation": ["About", "Services", "Work", "Contact"],
+    "hero": {
+      "heading": "Hi! Welcome to my portfolio",
+      "paragraph": "I’m an engineer with a year of commercial experience as a front-end developer, currently looking for a rewarding job as a front-end/full-stack developer.",
+      "button": "Contact me",
+      "availability_first": "Available",
+      "availability_second": "to work"
+    }
   }
 }
