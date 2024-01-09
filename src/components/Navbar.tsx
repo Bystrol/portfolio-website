@@ -38,7 +38,11 @@ export default function Navbar({
       <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10">
         <div className="flex justify-between items-center w-full max-w-[1440px] gap-[20px]">
           <h1
-            className={`text-[18px] lg:text-[22px] ${unbounded.className} uppercase`}
+            className={`text-[18px] lg:text-[22px] ${unbounded.className} uppercase cursor-pointer`}
+            onClick={() => {
+              scrollToSection(0)
+              setIsNavigationVisible(false)
+            }}
           >
             Michał Bystryk
           </h1>
@@ -50,7 +54,7 @@ export default function Navbar({
                     <li
                       key={index}
                       className="text-[14px] lg:text-[18px] cursor-pointer hover:drop-shadow-blue hover:-translate-y-[2px] transition-all duration-200"
-                      onClick={() => scrollToSection(index)}
+                      onClick={() => scrollToSection(index + 1)}
                     >
                       {navItem}
                     </li>
@@ -115,7 +119,7 @@ export default function Navbar({
                 key={index}
                 className="text-[36px] cursor-pointer hover:drop-shadow-blue transition-all duration-200"
                 onClick={() => {
-                  scrollToSection(index)
+                  scrollToSection(index + 1)
                   setIsNavigationVisible(false)
                 }}
               >
