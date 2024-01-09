@@ -1,11 +1,11 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import CircularButton from '@/components/CircularButton'
-import HeroSection from '@/components/HeroSection'
-import Navbar from '@/components/Navbar'
-import GithubLogo from '@/components/svg/GithubLogo'
-import LinkedinLogo from '@/components/svg/LinkedinLogo'
+import CircularButton from '@/components/molecules/CircularButton'
+import HeroSection from '@/components/organisms/HeroSection'
+import Navbar from '@/components/organisms/Navbar'
+import GithubLogo from '@/components/atoms/GithubLogo'
+import LinkedinLogo from '@/components/atoms/LinkedinLogo'
 import useLanguageSwitch from '@/hooks/useLanguageSwitch'
 
 export default function Home() {
