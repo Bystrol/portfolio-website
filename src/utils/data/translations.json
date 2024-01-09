@@ -10,7 +10,7 @@
     }
   },
   "en": {
-    "navigation": ["About", "Services", "Work", "Contact"],
+    "navigation": ["About", "Offer", "Projects", "Contact"],
     "hero": {
       "heading": "Hi! Welcome to my portfolio",
       "paragraph": "I’m an engineer with a year of commercial experience as a front-end developer, currently looking for a rewarding job as a front-end/full-stack developer.",
