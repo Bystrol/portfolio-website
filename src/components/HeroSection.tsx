@@ -6,6 +6,7 @@ import { Unbounded } from 'next/font/google'
 import MediumVector from './svg/MediumVector'
 import LargeVector from './svg/LargeVector'
 import { Translation } from '@/types/translation'
+import { sectionIds } from '@/utils/data/sectionIds'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -17,7 +18,10 @@ type HeroSectionProps = {
 
 export default function HeroSection({ translation }: HeroSectionProps) {
   return (
-    <section className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.png')] sm:bg-[url('../../public/images/mesh-gradient-tablet.png')] lg:bg-[url('../../public/images/mesh-gradient-desktop.png')] bg-cover bg-no-repeat bg-right">
+    <section
+      id={sectionIds[0]}
+      className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.png')] sm:bg-[url('../../public/images/mesh-gradient-tablet.png')] lg:bg-[url('../../public/images/mesh-gradient-desktop.png')] bg-cover bg-no-repeat bg-right"
+    >
       <SmallVector />
       <MediumVector />
       <LargeVector />
@@ -32,7 +36,7 @@ export default function HeroSection({ translation }: HeroSectionProps) {
         </p>
         <CtaButton
           text={translation.hero.button}
-          handleClick={() => scrollToSection(3)}
+          handleClick={() => scrollToSection(4)}
           icon={ArrowDown}
         />
       </div>
