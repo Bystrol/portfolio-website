@@ -7,6 +7,12 @@
       "button": "Napisz do mnie",
       "availability_first": "Dostępny",
       "availability_second": "od zaraz"
+    },
+    "about": {
+      "heading_first": "O mnie",
+      "paragraph_first": "Moja specjalność to full-stackowe aplikacje webowe oraz responsywne strony typu landing/multi page. Mój cel to rozwijające, pełne wyzwań i stabilne stanowisko front-end lub full-stack developera.",
+      "paragraph_second": "Preferuję pracę zdalną lub hybrydową w Warszawie, z wykorzystaniem takich technologii jak React.js, Next.js, TypeScript, Node.js.",
+      "heading_second": "Technologie"
     }
   },
   "en": {
@@ -17,6 +23,12 @@
       "button": "Contact me",
       "availability_first": "Available",
       "availability_second": "to work"
+    },
+    "about": {
+      "heading_first": "About",
+      "paragraph_first": "I specialize in full-stack web applications and responsive landing/multi pages. My goal is to find a satisfying, challenging, and stable position as a front-end or full-stack developer.",
+      "paragraph_second": "I prefer remote or hybrid work from Warsaw, using such technologies as React.js, Next.js, TypeScript, and Node.js.",
+      "heading_second": "Technologies"
     }
   }
 }
