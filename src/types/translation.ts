@@ -7,4 +7,10 @@ export type Translation = {
     availability_first: string
     availability_second: string
   }
+  about: {
+    heading_first: string
+    paragraph_first: string
+    paragraph_second: string
+    heading_second: string
+  }
 }
