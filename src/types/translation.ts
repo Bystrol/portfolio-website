@@ -13,4 +13,9 @@ export type Translation = {
     paragraph_second: string
     heading_second: string
   }
+  offer: {
+    heading: string
+    paragraph: string
+    cards: { title: string; content: string }[]
+  }
 }
