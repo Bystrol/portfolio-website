@@ -8,6 +8,7 @@ import GithubLogo from '@/components/atoms/GithubLogo'
 import LinkedinLogo from '@/components/atoms/LinkedinLogo'
 import useLanguageSwitch from '@/hooks/useLanguageSwitch'
 import AboutSection from '@/components/organisms/AboutSection'
+import OfferSection from '@/components/organisms/OfferSection'
 
 export default function Home() {
   const router = useRouter()
@@ -22,6 +23,7 @@ export default function Home() {
       />
       <HeroSection translation={translation} />
       <AboutSection translation={translation} />
+      <OfferSection translation={translation} />
       <div className="fixed bottom-[30px] right-[10px] sm:right-[30px] lg:right-[60px] flex flex-col gap-[10px]">
         <CircularButton
           handleClick={() => router.push('https://github.com/bystrol')}

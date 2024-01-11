@@ -13,6 +13,28 @@
       "paragraph_first": "Moja specjalność to full-stackowe aplikacje webowe oraz responsywne strony typu landing/multi page. Mój cel to rozwijające, pełne wyzwań i stabilne stanowisko front-end lub full-stack developera.",
       "paragraph_second": "Preferuję pracę zdalną lub hybrydową w Warszawie, z wykorzystaniem takich technologii jak React.js, Next.js, TypeScript, Node.js.",
       "heading_second": "Technologie"
+    },
+    "offer": {
+      "heading": "Oferta",
+      "paragraph": "Do każdej współpracy podchodzę kompleksowo, personalnie i z sumiennością wyniesioną ze studiów inżynierskich. Zobacz, co mogę dla Ciebie zrobić:",
+      "cards": [
+        {
+          "title": "Landing / multi pages",
+          "content": "Tworzę responsywne strony internetowe korzystając z nowoczesnych technologii. Dostosuję je do wskazanych przez Ciebie standardów i Twoich potrzeb."
+        },
+        {
+          "title": "Aplikacje webowe",
+          "content": "Moje aplikacje dla firm są w pełni funkcjonalne i realizują założenia biznesowe. Tworzę je głównie w stacku MERN."
+        },
+        {
+          "title": "Pełna obsługa stron www",
+          "content": "Strony internetowe od A do Z - hosting, domena, wdrożenie, utrzymanie i konserwacja, zabezpieczenie przed wirusami, SEO, SSL, analityka, testy A/B."
+        },
+        {
+          "title": "Mailingi marketingowe",
+          "content": "Kodowanie responsywnych maili transakcyjnych i marketingowych, dostosowanych do większości dostępnych skrzynek pocztowych."
+        }
+      ]
     }
   },
   "en": {
@@ -29,6 +51,28 @@
       "paragraph_first": "I specialize in full-stack web applications and responsive landing/multi pages. My goal is to find a satisfying, challenging, and stable position as a front-end or full-stack developer.",
       "paragraph_second": "I prefer remote or hybrid work from Warsaw, using such technologies as React.js, Next.js, TypeScript, and Node.js.",
       "heading_second": "Technologies"
+    },
+    "offer": {
+      "heading": "Offer",
+      "paragraph": "I work on every project comprehensively and with the diligence I developed during my engineering studies. I adopt a personal approach to every collaboration. See what I can do for you and your business:",
+      "cards": [
+        {
+          "title": "Landing / multi pages",
+          "content": "I use top-notch technologies to build responsive websites. To meet your expectations, I'll match them with your standards and needs."
+        },
+        {
+          "title": "Web applications",
+          "content": "My fully-fledged web applications are functional and fulfill the business goals set at the beginning of the project. I use mainly the MERN stack."
+        },
+        {
+          "title": "Complex website maintanance",
+          "content": "Websites from A to Z - hosting, domain, implementation, maintenance and upkeep, virus protection, SEO, SSL, analytics, A/B testing."
+        },
+        {
+          "title": "Email templates",
+          "content": "Fully responsive email templates adjusted to most of available mailboxes - transactional or marketing messages."
+        }
+      ]
     }
   }
 }

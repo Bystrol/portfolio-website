@@ -36,10 +36,10 @@ export default function AboutSection({ translation }: AboutSectionProps) {
             >
               {translation.about.heading_first}
             </h2>
-            <p className="text-justify sm:text-[18px] lg:text-[24px]">
+            <p className="sm:text-[18px] lg:text-[24px]">
               {translation.about.paragraph_first}
             </p>
-            <p className="text-justify text-[12px] sm:text-[14px] lg:text-[16px]">
+            <p className="text-[12px] sm:text-[14px] lg:text-[16px]">
               {translation.about.paragraph_second}
             </p>
           </div>
