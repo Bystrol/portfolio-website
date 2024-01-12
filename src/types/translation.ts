@@ -18,4 +18,9 @@ export type Translation = {
     paragraph: string
     cards: { title: string; content: string }[]
   }
+  projects: {
+    heading: string
+    cards: { title: string; content: string }[]
+    button: string
+  }
 }
