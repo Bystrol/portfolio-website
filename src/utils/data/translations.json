@@ -35,6 +35,28 @@
           "content": "Kodowanie responsywnych maili transakcyjnych i marketingowych, dostosowanych do większości dostępnych skrzynek pocztowych."
         }
       ]
+    },
+    "projects": {
+      "heading": "Projekty",
+      "cards": [
+        {
+          "title": "Internetowy sklep odzieżowy",
+          "content": "Aplikacja full-stackowa do kupowania ubrań oraz butów. Autentykacja i autoryzacja użytkowników: JWT. Cachowanie danych z backendu: React-Query. Płatności: Stripe. Użytkownik: wybiera rozmiar i kolor produktu, zarządza koszykiem, składa zamówienia."
+        },
+        {
+          "title": "FINEances - menedżer finansów",
+          "content": "Aplikacja full-stackowa do zarządzania finansami. Autentykacja użytkownika: dane uwierzytelniające, OAuth. Użytkownik: dodaje, filtruje i grupuje przychody i wydatki, aktualizuje swój profil."
+        },
+        {
+          "title": "Strona firmowa CloudClick",
+          "content": "Responsywna strona wizytówka dla spółki CloudClick. Użytkownik: poznaje ofertę, kontaktuje się z firmą, aplikuje na oferty pracy."
+        },
+        {
+          "title": "Strona firmowa CustomGO",
+          "content": "Responsywna strona wizytówka dla spółki CustomGO. Użytkownik: poznaje ofertę, kontaktuje się z firmą, aplikuje na oferty pracy."
+        }
+      ],
+      "button": "Zobacz kod"
     }
   },
   "en": {
@@ -73,6 +95,28 @@
           "content": "Fully responsive email templates adjusted to most of available mailboxes - transactional or marketing messages."
         }
       ]
+    },
+    "projects": {
+      "heading": "Projects",
+      "cards": [
+        {
+          "title": "E-commerce clothing store",
+          "content": "Full-stack web application for buying clothes and shoes. User authentication and autorization: JWT. Caching backend data: React-Query. Payments: Stripe. User: selects size and color, manages basket, places an order."
+        },
+        {
+          "title": "FINEances - finance manager",
+          "content": "Full-stack web application for managing your finances. User authentication: credentials, OAuth. User: adds, filters and groups earnings and spending, updates user profile."
+        },
+        {
+          "title": "CloudClick company website",
+          "content": "Responsive business website for CloudClick company. User: gets familiar with the offer, contacts the company, applies for jobs."
+        },
+        {
+          "title": "CustomGO company website",
+          "content": "Responsive business website for CustomGO company. User: gets familiar with the offer, contacts the company, applies for jobs."
+        }
+      ],
+      "button": "See the code"
     }
   }
 }

@@ -30,7 +30,7 @@ export default function OfferSection({ translation }: OfferSectionProps) {
       ref={sectionRef}
       className="relative lg:static h-[200vh] lg:h-screen w-full lg:flex lg:justify-center lg:items-center px-[30px] sm:px-[60px] lg:px-[120px] py-[60px] lg:py-0"
     >
-      <div className="sticky lg:static top-0 flex flex-col gap-[25px] pt-[60px] lg:pt-0 mr-[4.6vw] lg:pr-0 max-w-[1440px] overflow-hidden">
+      <div className="sticky lg:static top-0 flex flex-col gap-[25px] pt-[60px] lg:pt-0 mr-[4.6vw] lg:mr-0 max-w-[1440px] overflow-hidden">
         <h2
           className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
         >
