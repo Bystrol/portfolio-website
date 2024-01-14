@@ -57,6 +57,29 @@
         }
       ],
       "button": "Zobacz kod"
+    },
+    "contact": {
+      "heading": "Porozmawiajmy o naszych wspólnych projektach!",
+      "paragraph": "Masz pytanie, propozycję współpracy, albo chcesz po prostu pogadać? Czekam na wiadomość!",
+      "form": [
+        {
+          "label": "Imię",
+          "placeholder": "Wpisz swoje imię",
+          "errorMessage": "Wprowadzone imię jest zbyt krótkie"
+        },
+        {
+          "label": "E-mail",
+          "placeholder": "Wpisz swój adres e-mail",
+          "errorMessage": "Wprowadzony e-mail jest niepoprawny"
+        },
+        {
+          "label": "Wiadomość",
+          "placeholder": "Wpisz treść wiadomości",
+          "errorMessage": "Wprowadzona wiadomość jest zbyt krótka"
+        }
+      ],
+      "button": "Wyślij",
+      "successMessage": "twoja wiadomość została pomyślnie wysłana!"
     }
   },
   "en": {
@@ -117,6 +140,29 @@
         }
       ],
       "button": "See the code"
+    },
+    "contact": {
+      "heading": "Let's talk about our new project!",
+      "paragraph": "Got a question or proposal, or just want to say hello? Go ahead.",
+      "form": [
+        {
+          "label": "Name",
+          "placeholder": "Enter your name",
+          "errorMessage": "The name entered is too short"
+        },
+        {
+          "label": "E-mail",
+          "placeholder": "Enter your e-mail",
+          "errorMessage": "The e-mail entered is invalid"
+        },
+        {
+          "label": "Message",
+          "placeholder": "Enter your message",
+          "errorMessage": "The message entered is too short"
+        }
+      ],
+      "button": "Submit",
+      "successMessage": "your message was successfully sent!"
     }
   }
 }

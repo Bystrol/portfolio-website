@@ -23,4 +23,11 @@ export type Translation = {
     cards: { title: string; content: string }[]
     button: string
   }
+  contact: {
+    heading: string
+    paragraph: string
+    form: { label: string; placeholder: string; errorMessage: string }[]
+    button: string
+    successMessage: string
+  }
 }
