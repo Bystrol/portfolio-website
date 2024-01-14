@@ -10,6 +10,8 @@ import useLanguageSwitch from '@/hooks/useLanguageSwitch'
 import AboutSection from '@/components/organisms/AboutSection'
 import OfferSection from '@/components/organisms/OfferSection'
 import ProjectsSection from '@/components/organisms/ProjectsSection'
+import ContactSection from '@/components/organisms/ContactSection'
+import { githubLink, linkedinLink } from '@/utils/constants/socialMediaLinks'
 
 export default function Home() {
   const router = useRouter()
@@ -26,15 +28,14 @@ export default function Home() {
       <AboutSection translation={translation} />
       <OfferSection translation={translation} />
       <ProjectsSection translation={translation} />
+      <ContactSection translation={translation} />
       <div className="fixed bottom-[30px] right-[10px] sm:right-[30px] lg:right-[60px] flex flex-col gap-[10px]">
         <CircularButton
-          handleClick={() => router.push('https://github.com/bystrol')}
+          handleClick={() => router.push(githubLink)}
           icon={GithubLogo}
         />
         <CircularButton
-          handleClick={() =>
-            router.push('https://www.linkedin.com/in/michal-bystryk/')
-          }
+          handleClick={() => router.push(linkedinLink)}
           icon={LinkedinLogo}
         />
       </div>
