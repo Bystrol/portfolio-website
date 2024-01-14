@@ -3,8 +3,7 @@ import { sectionIds } from '@/utils/data/sectionIds'
 import { Unbounded } from 'next/font/google'
 import OfferCard from '../molecules/OfferCard'
 import { motion, useTransform, useScroll } from 'framer-motion'
-import { useRef } from 'react'
-import { isMobileDevice } from '@/utils/constants/isMobileDevice'
+import { useEffect, useRef, useState } from 'react'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -15,6 +14,7 @@ type OfferSectionProps = {
 }
 
 export default function OfferSection({ translation }: OfferSectionProps) {
+  const [isMobileDevice, setIsMobileDevice] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
     target: sectionRef
@@ -24,6 +24,14 @@ export default function OfferSection({ translation }: OfferSectionProps) {
   const cardsContent = translation.offer.cards.map((card, index) => {
     return <OfferCard key={index} title={card.title} content={card.content} />
   })
+
+  useEffect(() => {
+    setIsMobileDevice(
+      /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    )
+  }, [])
   return (
     <section
       id={sectionIds[2]}
