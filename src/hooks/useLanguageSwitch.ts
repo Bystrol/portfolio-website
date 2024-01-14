@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import translation from '../utils/data/translations.json'
 
 enum Languages {
@@ -8,13 +8,17 @@ enum Languages {
 }
 
 export default function useLanguageSwitch() {
-  const [language, setLanguage] = useState<string>(
-    localStorage.getItem('language') ??
-      (navigator.language.includes(Languages.Polish)
-        ? Languages.Polish
-        : Languages.English)
-  )
+  const [language, setLanguage] = useState<string>(Languages.Polish)
   const switchChecked = language === Languages.English
+
+  useEffect(() => {
+    setLanguage(
+      localStorage.getItem('language') ??
+        (navigator.language.includes(Languages.Polish)
+          ? Languages.Polish
+          : Languages.English)
+    )
+  }, [])
 
   const toggleSwitch = () => {
     if (switchChecked) {
