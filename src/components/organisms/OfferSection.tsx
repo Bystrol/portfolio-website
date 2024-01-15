@@ -19,7 +19,7 @@ export default function OfferSection({ translation }: OfferSectionProps) {
   const { scrollYProgress } = useScroll({
     target: sectionRef
   })
-  const x = useTransform(scrollYProgress, [0, 1], ['1%', '-220%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-220%'])
 
   const cardsContent = translation.offer.cards.map((card, index) => {
     return <OfferCard key={index} title={card.title} content={card.content} />
@@ -36,9 +36,9 @@ export default function OfferSection({ translation }: OfferSectionProps) {
     <section
       id={sectionIds[2]}
       ref={sectionRef}
-      className="relative lg:static h-[200vh] lg:h-screen w-full lg:flex lg:justify-center lg:items-center px-[30px] sm:px-[60px] lg:px-[120px] py-[60px] lg:py-0"
+      className="relative lg:static h-[200vh] lg:h-screen w-full lg:flex lg:justify-center lg:items-center sm:px-[60px] lg:px-[120px] pb-[60px] lg:pb-0"
     >
-      <div className="sticky lg:static top-0 flex flex-col gap-[25px] pt-[60px] lg:pt-0 mr-[4.6vw] lg:mr-0 max-w-[1440px] overflow-hidden">
+      <div className="sticky lg:static top-0 flex flex-col gap-[25px] pt-[15vh] lg:pt-0 mr-[4.6vw] lg:mr-0 max-w-[1440px] overflow-hidden px-[30px]">
         <h2
           className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
         >
