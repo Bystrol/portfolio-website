@@ -62,7 +62,7 @@ export default function Navbar({
                 })}
               </ul>
             </nav>
-            <div className="h-[30px] border-2 border-light-blue/[.50] rounded-full hover:drop-shadow-blue transition-all duration-200">
+            <div className="h-[30px] border-2 border-light-blue/[.50] rounded-full sm:hover:drop-shadow-blue transition-all duration-200">
               <Switch
                 checked={switchChecked}
                 onChange={toggleSwitch}
@@ -110,14 +110,14 @@ export default function Navbar({
       <nav
         className={`lg:hidden fixed top-[60px] ${
           isNavigationVisible ? 'left-0' : 'left-full'
-        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[120px] pl-[30px] transition-all duration- z-10`}
+        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[120px] pl-[30px] transition-all duration-200 z-10`}
       >
         <ul className="flex flex-col gap-[20px]">
           {translation.navigation.map((navItem, index) => {
             return (
               <li
                 key={index}
-                className="text-[36px] cursor-pointer hover:drop-shadow-blue transition-all duration-200"
+                className="text-[36px] cursor-pointer"
                 onClick={() => {
                   scrollToSection(index + 1)
                   setIsNavigationVisible(false)
