@@ -30,4 +30,7 @@ export type Translation = {
     button: string
     successMessage: string
   }
+  footer: {
+    paragraph: string
+  }
 }
