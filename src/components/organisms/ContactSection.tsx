@@ -10,6 +10,7 @@ import FormInput from '../molecules/FormInput'
 import { validateInput } from '@/utils/functions/validateInput'
 import toast from 'react-hot-toast'
 import { UpdatedInvalid } from '@/types/form'
+import sendEmail from '@/utils/functions/sendEmail'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -42,7 +43,8 @@ export default function ContactSection({ translation }: ContactSectionProps) {
 
   const submitForm = () => {
     if (isFormValid) {
-      //later I will add email sending here
+      const { name, email, message } = contactFormData
+      sendEmail(name, email, message)
       setContactFormData(initialContactFormData)
       toast.success(
         contactFormData.name + ', ' + translation.contact.successMessage
