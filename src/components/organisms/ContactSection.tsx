@@ -141,7 +141,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
               />
             )
           })}
-          <button className="w-max px-[40px] py-[6px] sm:px-[60px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
+          <button className="w-max px-[40px] py-[6px] sm:px-[60px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
             {translation.contact.button}
           </button>
         </form>
