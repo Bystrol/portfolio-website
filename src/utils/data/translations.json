@@ -80,6 +80,9 @@
       ],
       "button": "Wyślij",
       "successMessage": "twoja wiadomość została pomyślnie wysłana!"
+    },
+    "footer": {
+      "paragraph": "Wszelkie prawa zastrzeżone."
     }
   },
   "en": {
@@ -163,6 +166,9 @@
       ],
       "button": "Submit",
       "successMessage": "your message was successfully sent!"
+    },
+    "footer": {
+      "paragraph": "All rights reserved."
     }
   }
 }
