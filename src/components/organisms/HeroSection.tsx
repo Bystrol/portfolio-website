@@ -1,10 +1,7 @@
 import scrollToSection from '@/utils/functions/scrollToSection'
 import CtaButton from '../molecules/CtaButton'
-import SmallVector from '../atoms/SmallVector'
 import ArrowDown from '../atoms/ArrowDown'
 import { Unbounded } from 'next/font/google'
-import MediumVector from '../atoms/MediumVector'
-import LargeVector from '../atoms/LargeVector'
 import { Translation } from '@/types/translation'
 import { sectionIds } from '@/utils/data/sectionIds'
 
@@ -22,10 +19,7 @@ export default function HeroSection({ translation }: HeroSectionProps) {
       id={sectionIds[0]}
       className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.png')] sm:bg-[url('../../public/images/mesh-gradient-tablet.png')] lg:bg-[url('../../public/images/mesh-gradient-desktop.png')] bg-cover bg-no-repeat bg-right-bottom"
     >
-      <SmallVector />
-      <MediumVector />
-      <LargeVector />
-      <div className="absolute top-1/2 -translate-y-1/2 flex flex-col items-center gap-[20px] w-4/5">
+      <div className="absolute top-1/2 -translate-y-1/2 flex flex-col items-center gap-[20px] w-4/5 animate-slideUpGreeting">
         <h1
           className={`${unbounded.className} text-center text-[34px] sm:text-[58px] lg:text-[68px] max-w-[310px] sm:max-w-[520px] lg:max-w-[820px] leading-[45px] sm:leading-[75px] lg:leading-[80px]`}
         >
@@ -41,7 +35,7 @@ export default function HeroSection({ translation }: HeroSectionProps) {
           isAnimated={true}
         />
       </div>
-      <div className="absolute bottom-[30px] flex justify-center w-full px-[30px] sm:px-[60px] lg:px-[120px]">
+      <div className="absolute bottom-[30px] flex justify-center w-full px-[30px] sm:px-[60px] lg:px-[120px] animate-slideUp">
         <div
           className={`w-full max-w-[1440px] uppercase text-[16px] sm:text-[18px] lg:text-[20px] ${unbounded.className}`}
         >
