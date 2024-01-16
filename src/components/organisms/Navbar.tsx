@@ -35,7 +35,7 @@ export default function Navbar({
 
   return (
     <>
-      <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10">
+      <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10 animate-slideDown">
         <div className="flex justify-between items-center w-full max-w-[1440px] gap-[20px]">
           <h1
             className={`text-[18px] lg:text-[22px] ${unbounded.className} uppercase cursor-pointer`}

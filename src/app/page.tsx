@@ -1,46 +1,44 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import CircularButton from '@/components/molecules/CircularButton'
+import { useState } from 'react'
 import HeroSection from '@/components/organisms/HeroSection'
 import Navbar from '@/components/organisms/Navbar'
-import GithubLogo from '@/components/atoms/GithubLogo'
-import LinkedinLogo from '@/components/atoms/LinkedinLogo'
 import useLanguageSwitch from '@/hooks/useLanguageSwitch'
 import AboutSection from '@/components/organisms/AboutSection'
 import OfferSection from '@/components/organisms/OfferSection'
 import ProjectsSection from '@/components/organisms/ProjectsSection'
 import ContactSection from '@/components/organisms/ContactSection'
-import { githubLink, linkedinLink } from '@/utils/constants/socialMediaLinks'
 import Footer from '@/components/organisms/Footer'
+import PreloadingAnimation from '@/components/atoms/PreloadingAnimation'
+import SocialMedia from '@/components/molecules/SocialMedia'
 
 export default function Home() {
-  const router = useRouter()
+  const [showContent, setShowContent] = useState<boolean>(false)
   const { translation, switchChecked, toggleSwitch } = useLanguageSwitch()
+
+  setTimeout(() => {
+    setShowContent(true)
+  }, 1600)
 
   return (
     <>
-      <Navbar
-        translation={translation}
-        switchChecked={switchChecked}
-        toggleSwitch={toggleSwitch}
-      />
-      <HeroSection translation={translation} />
-      <AboutSection translation={translation} />
-      <OfferSection translation={translation} />
-      <ProjectsSection translation={translation} />
-      <ContactSection translation={translation} />
-      <Footer translation={translation} />
-      <div className="fixed bottom-[30px] right-[10px] sm:right-[30px] lg:right-[60px] flex flex-col gap-[10px]">
-        <CircularButton
-          handleClick={() => router.push(githubLink)}
-          icon={GithubLogo}
-        />
-        <CircularButton
-          handleClick={() => router.push(linkedinLink)}
-          icon={LinkedinLogo}
-        />
-      </div>
+      <PreloadingAnimation />
+      {showContent && (
+        <>
+          <Navbar
+            translation={translation}
+            switchChecked={switchChecked}
+            toggleSwitch={toggleSwitch}
+          />
+          <HeroSection translation={translation} />
+          <AboutSection translation={translation} />
+          <OfferSection translation={translation} />
+          <ProjectsSection translation={translation} />
+          <ContactSection translation={translation} />
+          <Footer translation={translation} />
+          <SocialMedia />
+        </>
+      )}
     </>
   )
 }
