@@ -8,7 +8,7 @@ enum Languages {
 }
 
 export default function useLanguageSwitch() {
-  const [language, setLanguage] = useState<string>(Languages.Polish)
+  const [language, setLanguage] = useState<string>()
   const switchChecked = language === Languages.English
 
   useEffect(() => {
