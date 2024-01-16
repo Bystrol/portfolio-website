@@ -20,6 +20,35 @@ const config: Config = {
       },
       dropShadow: {
         blue: '0px 0px 4px rgba(41, 96, 248, 1)'
+      },
+      keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(200%)' },
+          '100%': { transform: 'translateY(0)' }
+        },
+        slideUpGreeting: {
+          '0%': { transform: 'translateY(200%)' },
+          '100%': { transform: 'translateY(-50%)' }
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' }
+        },
+        slideLeftMobile: {
+          '0%': { transform: 'translateX(140%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
+        slideLeftDesktop: {
+          '0%': { transform: 'translateX(300%)' },
+          '100%': { transform: 'translateX(0)' }
+        }
+      },
+      animation: {
+        slideUp: 'slideUp 1s',
+        slideUpGreeting: 'slideUpGreeting 1s',
+        slideDown: 'slideDown 1s',
+        slideLeftMobile: 'slideLeftMobile 1s',
+        slideLeftDesktop: 'slideLeftDesktop 1s'
       }
     }
   },
