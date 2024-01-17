@@ -60,9 +60,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
             contactFormData.name + ', ' + translation.contact.successMessage
           )
         } else {
-          toast.error(
-            'Something went wrong with sending your message, please try another type of contact.'
-          )
+          toast.error(translation.contact.errorMessage)
         }
       })
     } else {
@@ -131,12 +129,24 @@ export default function ContactSection({ translation }: ContactSectionProps) {
               )
             })}
           </div>
-          <p className="text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
-            michalbystryk@gmail.com
-          </p>
-          <p className="text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
-            +48 518 432 557
-          </p>
+          <div className="flex">
+            <Link
+              className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px] hover:underline"
+              href="mailto:michalbystryk@gmail.com"
+            >
+              michalbystryk@gmail.com
+              <ArrowTopRight />
+            </Link>
+          </div>
+          <div className="flex">
+            <Link
+              className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px] hover:underline"
+              href="tel:+48518432557"
+            >
+              +48 518 432 557
+              <ArrowTopRight />
+            </Link>
+          </div>
         </div>
         <form
           className="flex flex-col gap-[10px] sm:gap-[15px] sm:w-1/2"
