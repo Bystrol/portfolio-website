@@ -10,6 +10,7 @@ import FormInput from '../molecules/FormInput'
 import { validateInput } from '@/utils/functions/validateInput'
 import toast from 'react-hot-toast'
 import { UpdatedInvalid } from '@/types/form'
+import { ClipLoader } from 'react-spinners'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -31,6 +32,7 @@ const socialMedia = [
 ]
 
 export default function ContactSection({ translation }: ContactSectionProps) {
+  const [isSendingEmail, setIsSendingEmail] = useState<boolean>(false)
   const [animateErrorMessage, setAnimateErrorMessage] = useState(false)
   const {
     initialContactFormData,
@@ -42,6 +44,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
 
   const submitForm = () => {
     if (isFormValid) {
+      setIsSendingEmail(true)
       const { name, email, message } = contactFormData
       fetch('/api/sendEmail', {
         method: 'POST',
@@ -49,11 +52,19 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ name, email, message })
+      }).then((res) => {
+        setIsSendingEmail(false)
+        setContactFormData(initialContactFormData)
+        if (res.ok) {
+          toast.success(
+            contactFormData.name + ', ' + translation.contact.successMessage
+          )
+        } else {
+          toast.error(
+            'Something went wrong with sending your message, please try another type of contact.'
+          )
+        }
       })
-      setContactFormData(initialContactFormData)
-      toast.success(
-        contactFormData.name + ', ' + translation.contact.successMessage
-      )
     } else {
       setContactFormData((prevContactFormData) => {
         const updatedInvalid: UpdatedInvalid = {
@@ -84,6 +95,12 @@ export default function ContactSection({ translation }: ContactSectionProps) {
       }, 500)
     }
   }
+
+  const buttonContent = isSendingEmail ? (
+    <ClipLoader color="#fff" size={25} />
+  ) : (
+    translation.contact.button
+  )
 
   return (
     <section
@@ -141,8 +158,8 @@ export default function ContactSection({ translation }: ContactSectionProps) {
               />
             )
           })}
-          <button className="w-max px-[40px] py-[6px] sm:px-[60px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
-            {translation.contact.button}
+          <button className="flex w-max px-[40px] py-[6px] sm:px-[60px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
+            {buttonContent}
           </button>
         </form>
       </div>
