@@ -29,6 +29,7 @@ export type Translation = {
     form: { label: string; placeholder: string; errorMessage: string }[]
     button: string
     successMessage: string
+    errorMessage: string
   }
   footer: {
     paragraph: string

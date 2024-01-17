@@ -79,7 +79,8 @@
         }
       ],
       "button": "Wyślij",
-      "successMessage": "twoja wiadomość została pomyślnie wysłana!"
+      "successMessage": "twoja wiadomość została pomyślnie wysłana!",
+      "errorMessage": "Coś poszło nie tak z wysłaniem twojej wiadomości, spróbuj proszę innej formy kontaktu."
     },
     "footer": {
       "paragraph": "Wszelkie prawa zastrzeżone."
@@ -165,7 +166,8 @@
         }
       ],
       "button": "Submit",
-      "successMessage": "your message was successfully sent!"
+      "successMessage": "your message was successfully sent!",
+      "errorMessage": "Something went wrong with sending your message, please try another type of contact."
     },
     "footer": {
       "paragraph": "All rights reserved."
