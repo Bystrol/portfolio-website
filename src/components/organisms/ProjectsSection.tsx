@@ -72,7 +72,7 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
     >
       <div className="max-w-[1440px]">
         <h2
-          className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
+          className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase pb-[20px] sm:pb-[25px]`}
         >
           {translation.projects.heading}
         </h2>
@@ -81,14 +81,14 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
             return (
               <div
                 key={index}
-                className="w-full flex flex-col sm:flex-row gap-[25px] sm:gap-[60px] lg:gap-[75px] py-[20px] sm:py-[40px]"
+                className="group w-full flex flex-col sm:flex-row gap-[25px] sm:gap-[60px] lg:gap-[75px] py-[20px] sm:py-[40px] sm:px-[40px] border border-light-black sm:hover:border-[#2960F880] rounded-[20px] sm:hover:bg-[#1B1B1B] transition-colors duration-500"
               >
-                <div className="w-3/4 sm:w-1/2">
+                <div className="w-3/4 sm:w-1/2 rounded-xl overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.technologies[0]}
                     quality={100}
-                    className="rounded-lg sm:rounded-xl"
+                    className="rounded-lg sm:rounded-xl sm:group-hover:scale-105 transition-all duration-500"
                   />
                 </div>
                 <div className="flex flex-col gap-[10px] sm:gap-[20px] sm:w-1/2">
@@ -98,14 +98,11 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                     })}
                   </div>
                   <div className="flex flex-col gap-[10px]">
-                    <div className="flex">
-                      <Link
-                        href={project.previewLink}
-                        className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[26px] hover:underline"
-                      >
+                    <div className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[26px]">
+                      <Link href={project.previewLink} className="peer">
                         {translation.projects.cards[index].title}
-                        <ArrowTopRight />
                       </Link>
+                      <ArrowTopRight />
                     </div>
                     <p className="text-[12px] sm:text-[14px] lg:text-[16px]">
                       {translation.projects.cards[index].content}

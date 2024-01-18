@@ -11,9 +11,9 @@ type FooterProps = {
 
 export default function Footer({ translation }: FooterProps) {
   return (
-    <footer className="w-full px-[30px] sm:px-[60px] lg:px-[120px] py-[10px] sm:py-[30px]">
+    <footer className="flex justify-center w-full px-[30px] sm:px-[60px] lg:px-[120px] py-[10px] sm:py-[30px]">
       <p
-        className={`${unbounded.className} text-[9px] sm:text-[14px] text-center`}
+        className={`${unbounded.className} w-full text-[9px] sm:text-[14px] max-w-[1440px]`}
       >
         © Michał Bystryk 2024. {translation.footer.paragraph}
       </p>

@@ -118,34 +118,29 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           <div className="flex gap-[12px] lg:gap-[15px]">
             {socialMedia.map((social, index) => {
               return (
-                <Link
+                <div
                   key={index}
-                  href={social.link}
-                  className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[24px] hover:underline"
+                  className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[24px]"
                 >
-                  {social.text}
+                  <Link href={social.link} className="peer">
+                    {social.text}
+                  </Link>
                   <ArrowTopRight />
-                </Link>
+                </div>
               )
             })}
           </div>
-          <div className="flex">
-            <Link
-              className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px] hover:underline"
-              href="mailto:michalbystryk@gmail.com"
-            >
+          <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
+            <Link href="mailto:michalbystryk@gmail.com" className="peer">
               michalbystryk@gmail.com
-              <ArrowTopRight />
             </Link>
+            <ArrowTopRight />
           </div>
-          <div className="flex">
-            <Link
-              className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px] hover:underline"
-              href="tel:+48518432557"
-            >
+          <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
+            <Link href="tel:+48518432557" className="peer">
               +48 518 432 557
-              <ArrowTopRight />
             </Link>
+            <ArrowTopRight />
           </div>
         </div>
         <form
