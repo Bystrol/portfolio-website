@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Switch from 'react-switch'
 import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
@@ -27,21 +27,49 @@ export default function Navbar({
   switchChecked,
   toggleSwitch
 }: NavbarProps) {
-  const [isNavigationVisible, setIsNavigationVisible] = useState<boolean>(false)
+  const [isMobileNavigationVisible, setIsMobileNavigationVisible] =
+    useState<boolean>(false)
 
   const toggleNavigation = () => {
-    setIsNavigationVisible((prevIsVisible) => !prevIsVisible)
+    setIsMobileNavigationVisible((prevIsVisible) => !prevIsVisible)
   }
+
+  let lastScrollY = window.scrollY
+
+  const handleScroll = useCallback(() => {
+    const navbarElement = document.getElementById('navbar')
+
+    if (!isMobileNavigationVisible) {
+      if (lastScrollY < window.scrollY) {
+        navbarElement?.classList.add('-translate-y-full')
+      } else {
+        navbarElement?.classList.remove('-translate-y-full')
+      }
+    }
+
+    lastScrollY = window.scrollY
+  }, [isMobileNavigationVisible])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleScroll])
 
   return (
     <>
-      <header className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10 animate-slideDown">
+      <header
+        id="navbar"
+        className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10 animate-slideDown transition-all duration-700"
+      >
         <div className="flex justify-between items-center w-full max-w-[1440px] gap-[20px]">
           <h1
             className={`text-[18px] lg:text-[22px] ${unbounded.className} uppercase cursor-pointer`}
             onClick={() => {
               scrollToSection(0)
-              setIsNavigationVisible(false)
+              setIsMobileNavigationVisible(false)
             }}
           >
             Michał Bystryk
@@ -101,7 +129,7 @@ export default function Navbar({
             <div className="sm:hidden">
               <CircularButton
                 handleClick={toggleNavigation}
-                icon={isNavigationVisible ? CloseIcon : BarsIcon}
+                icon={isMobileNavigationVisible ? CloseIcon : BarsIcon}
               />
             </div>
           </div>
@@ -109,8 +137,8 @@ export default function Navbar({
       </header>
       <nav
         className={`lg:hidden fixed top-[60px] ${
-          isNavigationVisible ? 'left-0' : 'left-full'
-        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[120px] pl-[30px] transition-all duration-200 z-10`}
+          isMobileNavigationVisible ? 'left-0' : 'left-full'
+        } flex items-end w-full h-dvh bg-light-black/[.03] backdrop-blur pb-[100px] pl-[30px] transition-all duration-200 z-10`}
       >
         <ul className="flex flex-col gap-[20px]">
           {translation.navigation.map((navItem, index) => {
@@ -120,7 +148,7 @@ export default function Navbar({
                 className="text-[36px] cursor-pointer"
                 onClick={() => {
                   scrollToSection(index + 1)
-                  setIsNavigationVisible(false)
+                  setIsMobileNavigationVisible(false)
                 }}
               >
                 {navItem}
