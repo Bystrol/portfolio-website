@@ -11,6 +11,8 @@ import TechnologyBox from '../atoms/TechnologyBox'
 import Link from 'next/link'
 import CtaButton from '../molecules/CtaButton'
 import ArrowTopRight from '../atoms/ArrowTopRight'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -62,12 +64,39 @@ const projectsDetails = [
   }
 ]
 
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 75
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
+
+const cardVariants = {
+  hidden: {
+    y: 75
+  },
+  visible: {
+    y: 0
+  }
+}
+
 export default function ProjectsSection({ translation }: ProjectsSectionProps) {
   const router = useRouter()
+  const sectionRef = useRef<HTMLElement>(null)
+  const isInView = useInView(sectionRef, { amount: 0.1, once: true })
 
   return (
-    <section
+    <motion.section
+      ref={sectionRef}
       id={sectionIds[3]}
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      transition={{ duration: 1 }}
       className="flex sm:justify-center gap-[20px] sm:gap-[25px] w-full px-[30px] sm:px-[60px] lg:px-[120px] py-[60px] lg:py-[83px]"
     >
       <div className="max-w-[1440px]">
@@ -79,8 +108,12 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
         <div className="flex flex-col gap-[40px] pr-[4.6vw] sm:pr-0">
           {projectsDetails.map((project, index) => {
             return (
-              <div
+              <motion.div
                 key={index}
+                variants={cardVariants}
+                initial="hidden"
+                transition={{ duration: 0.5 }}
+                whileInView="visible"
                 className="group w-full flex flex-col sm:flex-row gap-[25px] sm:gap-[60px] lg:gap-[75px] py-[20px] sm:py-[40px] sm:px-[40px] border border-light-black sm:hover:border-[#2960F880] rounded-[20px] sm:hover:bg-[#1B1B1B] transition-colors duration-500"
               >
                 <div className="w-3/4 sm:w-1/2 rounded-xl overflow-hidden">
@@ -118,11 +151,11 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                     />
                   )}
                 </div>
-              </div>
+              </motion.div>
             )
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
