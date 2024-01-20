@@ -137,7 +137,7 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                       </Link>
                       <ArrowTopRight />
                     </div>
-                    <p className="text-[12px] sm:text-[14px] lg:text-[16px]">
+                    <p className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]">
                       {translation.projects.cards[index].content}
                     </p>
                   </div>

@@ -25,7 +25,7 @@ export default function OfferCard({ title, content }: OfferCardProps) {
       <h3 className="text-[22px] sm:text-[24px] lg:text-[26px] w-3/4 sm:w-2/3">
         {title}
       </h3>
-      <p className="text-[12px] sm:text[14px]">{content}</p>
+      <p className="text-[12px] sm:text-[14px] text-white/[.70]">{content}</p>
     </motion.div>
   )
 }
