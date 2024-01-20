@@ -38,7 +38,7 @@ const containerVariants = {
 const imageVariants = {
   hidden: {
     opacity: 0,
-    y: 120
+    y: 100
   },
   visible: {
     opacity: 1,
@@ -97,7 +97,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
               initial="hidden"
               animate={isInView ? 'visible' : 'hidden'}
               transition={{ staggerChildren: 0.01 }}
-              className="text-[12px] sm:text-[14px] lg:text-[16px]"
+              className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]"
             >
               {translation.about.paragraph_second
                 .split('')
@@ -126,7 +126,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
           variants={imageVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          transition={{ duration: 1, delay: 0.25 }}
+          transition={{ duration: 1 }}
           className="w-[250px] sm:w-[287px] lg:w-[386px]"
         >
           <Image src={PortraitImg} alt="portrait" quality={100} priority />
