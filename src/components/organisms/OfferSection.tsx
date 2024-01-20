@@ -65,14 +65,14 @@ export default function OfferSection({ translation }: OfferSectionProps) {
           {translation.offer.paragraph}
         </p>
         {isMobileDevice ? (
-          <motion.div style={{ x }} className="test1 flex gap-[20px]">
+          <motion.div style={{ x }} className="flex gap-[20px]">
             {cardsContent}
           </motion.div>
         ) : (
           <motion.div
             animate={isInView ? 'visible' : 'hidden'}
             transition={{ staggerChildren: 0.2, delayChildren: 0.3 }}
-            className="test2 flex gap-[20px]"
+            className="flex gap-[20px]"
           >
             {cardsContent}
           </motion.div>
