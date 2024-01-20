@@ -54,9 +54,11 @@ const formVariants = {
   }
 }
 
+let isInitial = true
+
 export default function ContactSection({ translation }: ContactSectionProps) {
   const [isSendingEmail, setIsSendingEmail] = useState<boolean>(false)
-  const [animateErrorMessage, setAnimateErrorMessage] = useState(false)
+  const [flashInvalidInput, setFlashInvalidInput] = useState(false)
   const {
     initialContactFormData,
     contactFormData,
@@ -111,10 +113,11 @@ export default function ContactSection({ translation }: ContactSectionProps) {
         }
       })
 
-      setAnimateErrorMessage(true)
+      !isInitial && setFlashInvalidInput(true)
+      isInitial = false
 
       setTimeout(() => {
-        setAnimateErrorMessage(false)
+        setFlashInvalidInput(false)
       }, 500)
     }
   }
@@ -193,7 +196,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
                 onChange={input.onChange}
                 onBlur={input.onBlur}
                 index={index}
-                animateErrorMessage={animateErrorMessage}
+                flashInvalidInput={flashInvalidInput}
               />
             )
           })}
