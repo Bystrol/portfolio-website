@@ -41,6 +41,11 @@ const config: Config = {
         slideLeftDesktop: {
           '0%': { transform: 'translateX(300%)' },
           '100%': { transform: 'translateX(0)' }
+        },
+        flash: {
+          '0%': { borderColor: 'rgb(220 38 38)' },
+          '50%': { borderColor: 'rgb(255 255 255)' },
+          '100%': { borderColor: 'rgb(220 38 38)' }
         }
       },
       animation: {
@@ -48,7 +53,8 @@ const config: Config = {
         slideUpGreeting: 'slideUpGreeting 1s',
         slideDown: 'slideDown 1s',
         slideLeftMobile: 'slideLeftMobile 1s',
-        slideLeftDesktop: 'slideLeftDesktop 1s'
+        slideLeftDesktop: 'slideLeftDesktop 1s',
+        flash: 'flash .5s'
       }
     }
   },
