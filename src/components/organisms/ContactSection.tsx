@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { sectionIds } from '@/utils/data/sectionIds'
 import { Unbounded } from 'next/font/google'
 import Link from 'next/link'
@@ -31,6 +32,28 @@ const socialMedia = [
   }
 ]
 
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 75
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
+
+const formVariants = {
+  hidden: {
+    opacity: 0,
+    y: 120
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
+
 export default function ContactSection({ translation }: ContactSectionProps) {
   const [isSendingEmail, setIsSendingEmail] = useState<boolean>(false)
   const [animateErrorMessage, setAnimateErrorMessage] = useState(false)
@@ -41,6 +64,8 @@ export default function ContactSection({ translation }: ContactSectionProps) {
     contactFormInputsData,
     isFormValid
   } = useContactForm()
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const isInView = useInView(sectionRef, { amount: 0.2, once: true })
 
   const submitForm = () => {
     if (isFormValid) {
@@ -101,8 +126,13 @@ export default function ContactSection({ translation }: ContactSectionProps) {
   )
 
   return (
-    <section
+    <motion.section
       id={sectionIds[4]}
+      ref={sectionRef}
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      transition={{ duration: 1 }}
       className="w-full sm:h-screen flex justify-center items-center px-[30px] sm:px-[60px] lg:px-[120px] py-[60px] sm:py-0"
     >
       <div className="w-full flex flex-col sm:flex-row sm:justify-between gap-[40px] sm:gap-0 pr-[4.6vw] sm:pr-0 max-w-[1440px]">
@@ -143,7 +173,11 @@ export default function ContactSection({ translation }: ContactSectionProps) {
             <ArrowTopRight />
           </div>
         </div>
-        <form
+        <motion.form
+          variants={formVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          transition={{ duration: 1 }}
           className="flex flex-col gap-[10px] sm:gap-[15px] sm:w-1/2"
           action={submitForm}
         >
@@ -166,8 +200,8 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           <button className="flex w-max px-[40px] py-[6px] sm:px-[60px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
             {buttonContent}
           </button>
-        </form>
+        </motion.form>
       </div>
-    </section>
+    </motion.section>
   )
 }
