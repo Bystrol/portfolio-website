@@ -16,7 +16,7 @@ type FormInputProps = {
         ChangeEventHandler<HTMLTextAreaElement>)
     | undefined
   index: number
-  animateErrorMessage: boolean
+  flashInvalidInput: boolean
 }
 
 export default function FormInput({
@@ -28,7 +28,7 @@ export default function FormInput({
   onChange,
   onBlur,
   index,
-  animateErrorMessage
+  flashInvalidInput
 }: FormInputProps) {
   return (
     <div className="flex flex-col gap-[5px] sm:gap-[10px]">
@@ -42,17 +42,15 @@ export default function FormInput({
         placeholder={translation.contact.form[index].placeholder}
         className={`rounded-lg border ${
           isInvalid ? 'border-red-600' : 'border-[#0043FE80]'
-        } bg-[#1B1B1B] text-[#FFFFFF66] text-[12px] sm:text-[16px] px-[20px] py-[12px] outline-none ring-0`}
+        } bg-[#1B1B1B] text-[#FFFFFF66] text-[12px] sm:text-[16px] px-[20px] py-[12px] outline-none ring-0 ${
+          isInvalid && flashInvalidInput && 'animate-flash'
+        }`}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
       />
       {isInvalid && (
-        <p
-          className={`ml-[20px] text-[10px] sm:text-[14px] text-red-600 ${
-            animateErrorMessage && 'animate-bounce'
-          }`}
-        >
+        <p className="ml-[20px] text-[10px] sm:text-[14px] text-red-600">
           {translation.contact.form[index].errorMessage}
         </p>
       )}
