@@ -9,7 +9,13 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Michał Bystryk | Full-stack Developer',
   description:
-    'Michał Bystryk, a proficient full-stack developer with expertise in modern web technologies like React, TypeScript, and Node.js.'
+    'Michał Bystryk, a proficient full-stack developer with expertise in modern web technologies like React, TypeScript, and Node.js.',
+  keywords: [
+    'Michał Bystryk',
+    'Front-end developer',
+    'Full-stack developer',
+    'Web development'
+  ]
 }
 
 export const viewport: Viewport = {
