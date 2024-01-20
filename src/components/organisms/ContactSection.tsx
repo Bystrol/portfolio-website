@@ -46,7 +46,7 @@ const containerVariants = {
 const formVariants = {
   hidden: {
     opacity: 0,
-    y: 120
+    y: 100
   },
   visible: {
     opacity: 1,
@@ -145,7 +145,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           >
             {translation.contact.heading}
           </h2>
-          <p className="text-[14px] lg:text-[18px] pb-[45px] lg:pb-[65px]">
+          <p className="text-[14px] lg:text-[18px] pb-[45px] lg:pb-[65px] text-white/[.70]">
             {translation.contact.paragraph}
           </p>
           <div className="flex gap-[12px] lg:gap-[15px]">
