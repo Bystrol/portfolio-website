@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast'
 import type { Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import ClarityTag from '@/components/others/ClarityTag'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,6 +48,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        <ClarityTag />
       </body>
     </html>
   )
