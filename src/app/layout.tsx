@@ -20,7 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     images: '/opengraph-image.png'
   },
-  creator: 'Michał Bystryk'
+  creator: 'Michał Bystryk',
+  other: {
+    'google-site-verification': 'FCpCptrurAkfrhyDUvNjSoHOkjh7H7uEKyHkV03JyZc'
+  }
 }
 
 export const viewport: Viewport = {
