@@ -7,6 +7,7 @@ import type { Viewport } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.michalbystryk.dev/'),
   title: 'Michał Bystryk | Full-stack Developer',
   description:
     'Michał Bystryk, a proficient full-stack developer with expertise in modern web technologies like React, TypeScript, and Node.js.',
@@ -15,7 +16,11 @@ export const metadata: Metadata = {
     'Front-end developer',
     'Full-stack developer',
     'Web development'
-  ]
+  ],
+  openGraph: {
+    images: '/opengraph-image.png'
+  },
+  creator: 'Michał Bystryk'
 }
 
 export const viewport: Viewport = {
