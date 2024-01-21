@@ -32,7 +32,6 @@ export default function HeroSection({ translation }: HeroSectionProps) {
           text={translation.hero.button}
           handleClick={() => scrollToSection(4)}
           icon={ArrowDown}
-          isAnimated={true}
         />
       </div>
       <div className="absolute bottom-[30px] flex justify-center w-full px-[30px] sm:px-[60px] lg:px-[120px] animate-slideUp">
