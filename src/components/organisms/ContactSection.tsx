@@ -46,7 +46,7 @@ const containerVariants = {
 const formVariants = {
   hidden: {
     opacity: 0,
-    y: 100
+    y: 75
   },
   visible: {
     opacity: 1,
@@ -155,7 +155,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
                   key={index}
                   className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[24px]"
                 >
-                  <Link href={social.link} className="peer">
+                  <Link href={social.link} className="peer" target="_blank">
                     {social.text}
                   </Link>
                   <ArrowTopRight />
@@ -164,13 +164,17 @@ export default function ContactSection({ translation }: ContactSectionProps) {
             })}
           </div>
           <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
-            <Link href="mailto:michalbystryk@gmail.com" className="peer">
+            <Link
+              href="mailto:michalbystryk@gmail.com"
+              className="peer"
+              target="_blank"
+            >
               michalbystryk@gmail.com
             </Link>
             <ArrowTopRight />
           </div>
           <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
-            <Link href="tel:+48518432557" className="peer">
+            <Link href="tel:+48518432557" className="peer" target="_blank">
               +48 518 432 557
             </Link>
             <ArrowTopRight />
@@ -180,7 +184,7 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           variants={formVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
           className="flex flex-col gap-[10px] sm:gap-[15px] sm:w-1/2"
           action={submitForm}
         >
