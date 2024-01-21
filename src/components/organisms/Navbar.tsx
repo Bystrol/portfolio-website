@@ -35,20 +35,33 @@ export default function Navbar({
   }
 
   let lastScrollY = window.scrollY
+  let totalScrolled = 0
+  let scrollingDown = false
 
   const handleScroll = useCallback(() => {
     const navbarElement = document.getElementById('navbar')
 
     if (!isMobileNavigationVisible) {
-      if (lastScrollY < window.scrollY) {
-        navbarElement?.classList.add('-translate-y-full')
+      const currentScrollingDown = window.scrollY > lastScrollY
+      if (currentScrollingDown !== scrollingDown) {
+        totalScrolled = 0
       } else {
-        navbarElement?.classList.remove('-translate-y-full')
+        totalScrolled += Math.abs(window.scrollY - lastScrollY)
       }
+
+      if (totalScrolled > 100) {
+        if (currentScrollingDown && window.scrollY > 100) {
+          navbarElement?.classList.add('-translate-y-full')
+        } else {
+          navbarElement?.classList.remove('-translate-y-full')
+        }
+      }
+
+      scrollingDown = currentScrollingDown
     }
 
     lastScrollY = window.scrollY
-  }, [isMobileNavigationVisible])
+  }, [])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)

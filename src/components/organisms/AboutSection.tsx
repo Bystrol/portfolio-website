@@ -38,7 +38,7 @@ const containerVariants = {
 const imageVariants = {
   hidden: {
     opacity: 0,
-    y: 100
+    y: 75
   },
   visible: {
     opacity: 1,
@@ -126,7 +126,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
           variants={imageVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
           className="w-[250px] sm:w-[287px] lg:w-[386px]"
         >
           <Image src={PortraitImg} alt="portrait" quality={100} priority />

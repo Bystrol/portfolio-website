@@ -31,7 +31,7 @@ export default function OfferSection({ translation }: OfferSectionProps) {
     target: sectionRef
   })
   const isInView = useInView(sectionRef, { amount: 0.2, once: true })
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-220%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-328%'])
 
   const cardsContent = translation.offer.cards.map((card, index) => {
     return <OfferCard key={index} title={card.title} content={card.content} />
@@ -65,7 +65,7 @@ export default function OfferSection({ translation }: OfferSectionProps) {
           {translation.offer.paragraph}
         </p>
         {isMobileDevice ? (
-          <motion.div style={{ x }} className="flex gap-[20px]">
+          <motion.div style={{ x }} className="flex gap-[30px] w-[104%]">
             {cardsContent}
           </motion.div>
         ) : (

@@ -2,14 +2,12 @@ import { Translation } from '@/types/translation'
 import { sectionIds } from '@/utils/data/sectionIds'
 import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import FirstProjectImage from '../../../public/images/project-image-1.png'
 import SecondProjectImage from '../../../public/images/project-image-2.png'
 import ThirdProjectImage from '../../../public/images/project-image-3.png'
 import FourthProjectImage from '../../../public/images/project-image-4.png'
 import TechnologyBox from '../atoms/TechnologyBox'
 import Link from 'next/link'
-import CtaButton from '../molecules/CtaButton'
 import ArrowTopRight from '../atoms/ArrowTopRight'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
@@ -85,7 +83,6 @@ const cardVariants = {
 }
 
 export default function ProjectsSection({ translation }: ProjectsSectionProps) {
-  const router = useRouter()
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { amount: 0.1, once: true })
 
@@ -116,14 +113,18 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                 whileInView="visible"
                 className="group w-full flex flex-col sm:flex-row gap-[25px] sm:gap-[60px] lg:gap-[75px] py-[20px] sm:py-[40px] sm:px-[40px] border border-light-black sm:hover:border-[#2960F880] rounded-[20px] sm:hover:bg-[#1B1B1B] transition-colors duration-500"
               >
-                <div className="w-3/4 sm:w-1/2 rounded-xl overflow-hidden">
+                <Link
+                  href={project.previewLink}
+                  target="_blank"
+                  className="w-3/4 sm:w-1/2 rounded-xl overflow-hidden h-max"
+                >
                   <Image
                     src={project.image}
                     alt={project.technologies[0]}
                     quality={100}
                     className="rounded-lg sm:rounded-xl sm:group-hover:scale-105 transition-all duration-500"
                   />
-                </div>
+                </Link>
                 <div className="flex flex-col gap-[10px] sm:gap-[20px] sm:w-1/2">
                   <div className="flex flex-wrap gap-[8px] sm:gap-[13px]">
                     {project.technologies.map((technology, index) => {
@@ -132,7 +133,11 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                   </div>
                   <div className="flex flex-col gap-[10px]">
                     <div className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[26px]">
-                      <Link href={project.previewLink} className="peer">
+                      <Link
+                        href={project.previewLink}
+                        className="peer"
+                        target="_blank"
+                      >
                         {translation.projects.cards[index].title}
                       </Link>
                       <ArrowTopRight />
@@ -142,13 +147,11 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                     </p>
                   </div>
                   {project.githubLink !== '' && (
-                    <CtaButton
-                      text={translation.projects.button}
-                      handleClick={() => {
-                        router.push(project.githubLink)
-                      }}
-                      isAnimated={false}
-                    />
+                    <Link href={project.githubLink} target="_blank">
+                      <button className="flex px-[15px] py-[6px] sm:px-[30px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
+                        {translation.projects.button}
+                      </button>
+                    </Link>
                   )}
                 </div>
               </motion.div>
