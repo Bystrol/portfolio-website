@@ -3,15 +3,15 @@
     "navigation": ["O mnie", "Oferta", "Projekty", "Kontakt"],
     "hero": {
       "heading": "Cześć! Miło Cię gościć w moim portfolio",
-      "paragraph": "Jestem inżynierem z rocznym doświadczeniem komercyjnym jako front-end developer. Obecnie szukam pełnej szans do rozwoju pracy na stanowisku front-end/full-stack developera.",
+      "paragraph": "Jestem inżynierem, który aktualnie pracuje na stanowisku front-end developera. Zobacz poniżej jakie usługi mogę ci zaoferować.",
       "button": "Napisz do mnie",
       "availability_first": "Dostępny",
       "availability_second": "od zaraz"
     },
     "about": {
       "heading_first": "O mnie",
-      "paragraph_first": "Moja specjalność to full-stackowe aplikacje webowe oraz responsywne strony typu landing/multi page. Mój cel to rozwijające, pełne wyzwań i stabilne stanowisko front-end lub full-stack developera.",
-      "paragraph_second": "Preferuję pracę zdalną lub hybrydową w Warszawie, z wykorzystaniem takich technologii jak React.js, Next.js, TypeScript, Node.js.",
+      "paragraph_first": "Moja specjalność to tworzenie warstwy front-endowej aplikacji webowych oraz responsywnych stron typu landing/multi page.",
+      "paragraph_second": "Budując projekt najczęściej korzystam z takich technologii jak React.js, Next.js, TypeScript, Node.js.",
       "heading_second": "Technologie"
     },
     "offer": {
@@ -90,15 +90,15 @@
     "navigation": ["About", "Offer", "Projects", "Contact"],
     "hero": {
       "heading": "Hi! Welcome to my portfolio",
-      "paragraph": "I’m an engineer with a year of commercial experience as a front-end developer, currently looking for a rewarding job as a front-end/full-stack developer.",
+      "paragraph": "I'm an engineer who is currently working as a front-end developer. See below what services I can offer you.",
       "button": "Contact me",
       "availability_first": "Available",
       "availability_second": "to work"
     },
     "about": {
       "heading_first": "About",
-      "paragraph_first": "I specialize in full-stack web applications and responsive landing/multi pages. My goal is to find a satisfying, challenging, and stable position as a front-end or full-stack developer.",
-      "paragraph_second": "I prefer remote or hybrid work from Warsaw, using such technologies as React.js, Next.js, TypeScript, and Node.js.",
+      "paragraph_first": "My specialty is front-end layer development of web applications and responsive landing/multi page websites.",
+      "paragraph_second": "When building a project, I usually use technologies such as React.js, Next.js, TypeScript, Node.js.",
       "heading_second": "Technologies"
     },
     "offer": {
