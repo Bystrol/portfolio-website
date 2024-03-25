@@ -38,13 +38,13 @@ export default function HeroSection({ translation }: HeroSectionProps) {
         <div
           className={`w-full max-w-[1440px] uppercase text-[16px] sm:text-[18px] lg:text-[20px] ${unbounded.className}`}
         >
-          <div className="w-max text-right leading-[20px] sm:leading-[22.5px] lg:leading-[25px]">
+          {/* <div className="w-max text-right leading-[20px] sm:leading-[22.5px] lg:leading-[25px]">
             <p>{translation.hero.availability_first}</p>
             <div className="w-[14px] h-[14px] rounded-full bg-gradient-to-r from-[#5035DA] to-[#2960F8] inline-block" />
             <p className="inline-block ml-1.5">
               {translation.hero.availability_second}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
