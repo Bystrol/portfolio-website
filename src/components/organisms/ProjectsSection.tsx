@@ -53,12 +53,6 @@ const projectsDetails = [
     technologies: ['wordpress', 'javascript', 'php', 'mysql'],
     previewLink: 'https://cloudclick.pl/',
     githubLink: ''
-  },
-  {
-    image: FourthProjectImage,
-    technologies: ['wordpress', 'javascript', 'php', 'mysql'],
-    previewLink: 'https://customgo.pl/',
-    githubLink: ''
   }
 ]
 
