@@ -173,12 +173,12 @@ export default function ContactSection({ translation }: ContactSectionProps) {
             </Link>
             <ArrowTopRight />
           </div>
-          <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
+          {/* <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
             <Link href="tel:+48518432557" className="peer" target="_blank">
               +48 518 432 557
             </Link>
             <ArrowTopRight />
-          </div>
+          </div> */}
         </div>
         <motion.form
           variants={formVariants}
