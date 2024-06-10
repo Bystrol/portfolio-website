@@ -11,15 +11,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.michalbystryk.dev/'),
-  title: 'Michał Bystryk | Full-stack Developer',
+  title: 'Michał Bystryk | Front-end Developer',
   description:
-    'Michał Bystryk, a proficient full-stack developer with expertise in modern web technologies like React, TypeScript, and Node.js.',
-  keywords: [
-    'Michał Bystryk',
-    'Front-end developer',
-    'Full-stack developer',
-    'Web development'
-  ],
+    'Michał Bystryk, a proficient front-end developer with expertise in modern web technologies like React, TypeScript, and Node.js.',
+  keywords: ['Michał Bystryk', 'Front-end developer', 'Web development'],
   openGraph: {
     images: '/opengraph-image.png'
   },
