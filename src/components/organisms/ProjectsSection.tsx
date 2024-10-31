@@ -4,8 +4,6 @@ import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
 import FirstProjectImage from '../../../public/images/project-image-1.png'
 import SecondProjectImage from '../../../public/images/project-image-2.png'
-import ThirdProjectImage from '../../../public/images/project-image-3.png'
-import FourthProjectImage from '../../../public/images/project-image-4.png'
 import TechnologyBox from '../atoms/TechnologyBox'
 import Link from 'next/link'
 import ArrowTopRight from '../atoms/ArrowTopRight'
@@ -48,12 +46,6 @@ const projectsDetails = [
     previewLink: 'https://finance-manager-six.vercel.app/',
     githubLink: 'https://github.com/Bystrol/finance-manager'
   },
-  {
-    image: ThirdProjectImage,
-    technologies: ['wordpress', 'javascript', 'php', 'mysql'],
-    previewLink: 'https://cloudclick.pl/',
-    githubLink: ''
-  }
 ]
 
 const containerVariants = {
