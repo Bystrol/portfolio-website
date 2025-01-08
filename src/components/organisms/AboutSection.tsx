@@ -21,7 +21,6 @@ const technologies: string[] = [
   'Typescript',
   'Express.js',
   'Nosql',
-  'Wordpress'
 ]
 
 const containerVariants = {

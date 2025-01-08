@@ -19,7 +19,7 @@
       "paragraph": "Do każdej współpracy podchodzę kompleksowo, personalnie i z sumiennością wyniesioną ze studiów inżynierskich. Zobacz, co mogę dla Ciebie zrobić:",
       "cards": [
         {
-          "title": "Landing / multi pages",
+          "title": "Strony internetowe",
           "content": "Tworzę responsywne strony internetowe, korzystając z nowoczesnych technologii. Dostosuję je do wskazanych przez Ciebie standardów i Twoich potrzeb."
         },
         {
@@ -27,11 +27,11 @@
           "content": "Moje aplikacje dla firm są w pełni funkcjonalne i realizują założenia biznesowe. Tworzę je głównie w stacku MERN."
         },
         {
-          "title": "Pełna obsługa stron",
-          "content": "Strony internetowe od A do Z - hosting, domena, wdrożenie, utrzymanie i konserwacja, zabezpieczenie przed wirusami, SEO, SSL, analityka, testy A/B."
+          "title": "Utrzymanie",
+          "content": "Utrzymanie od A do Z - hosting, domena, wdrożenie, utrzymanie i konserwacja, zabezpieczenie przed wirusami, SEO, SSL, analityka, testy A/B."
         },
         {
-          "title": "Mailingi marketingowe",
+          "title": "Szablony mailowe",
           "content": "Kodowanie responsywnych maili transakcyjnych i marketingowych, dostosowanych do większości dostępnych skrzynek pocztowych."
         }
       ]
@@ -46,14 +46,6 @@
         {
           "title": "FINEances - menedżer finansów",
           "content": "Aplikacja full-stackowa do zarządzania finansami. Autentykacja użytkownika: dane uwierzytelniające, OAuth. Użytkownik: dodaje, filtruje i grupuje przychody i wydatki, aktualizuje swój profil."
-        },
-        {
-          "title": "Strona firmowa CloudClick",
-          "content": "Responsywna strona wizytówka dla spółki CloudClick. Użytkownik: poznaje ofertę, kontaktuje się z firmą, aplikuje na oferty pracy."
-        },
-        {
-          "title": "Strona firmowa CustomGO",
-          "content": "Responsywna strona wizytówka dla spółki CustomGO. Użytkownik: poznaje ofertę, kontaktuje się z firmą, aplikuje na oferty pracy."
         }
       ],
       "button": "Zobacz kod"
@@ -106,7 +98,7 @@
       "paragraph": "I work on every project comprehensively and with the diligence I developed during my engineering studies. I adopt a personal approach to every collaboration. See what I can do for you and your business:",
       "cards": [
         {
-          "title": "Landing / multi pages",
+          "title": "Websites",
           "content": "I use top-notch technologies to build responsive websites. To meet your expectations, I'll match them with your standards and needs."
         },
         {
@@ -114,8 +106,8 @@
           "content": "My fully-fledged web applications are functional and fulfill the business goals set at the beginning of the project. I use mainly the MERN stack."
         },
         {
-          "title": "Website maintanance",
-          "content": "Websites from A to Z - hosting, domain, implementation, maintenance and upkeep, virus protection, SEO, SSL, analytics, A/B testing."
+          "title": "Maintanance",
+          "content": "Maintanance from A to Z - hosting, domain, implementation, maintenance and upkeep, virus protection, SEO, SSL, analytics, A/B testing."
         },
         {
           "title": "Email templates",
@@ -133,14 +125,6 @@
         {
           "title": "FINEances - finance manager",
           "content": "Full-stack web application for managing your finances. User authentication: credentials, OAuth. User: adds, filters and groups earnings and spending, updates user profile."
-        },
-        {
-          "title": "CloudClick company website",
-          "content": "Responsive business website for CloudClick company. User: gets familiar with the offer, contacts the company, applies for jobs."
-        },
-        {
-          "title": "CustomGO company website",
-          "content": "Responsive business website for CustomGO company. User: gets familiar with the offer, contacts the company, applies for jobs."
         }
       ],
       "button": "See the code"
