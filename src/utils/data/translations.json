@@ -40,6 +40,10 @@
       "heading": "Projekty",
       "cards": [
         {
+          "title": "Panel administracyjny",
+          "content": "Klasyczny panel administracyjny z autentykacją użytkownika. Użytkownik widzi swoje przychody i użytkowników na wykresach. Może również wyszukać konkretne zamówienia."
+        },
+        {
           "title": "Internetowy sklep odzieżowy",
           "content": "Aplikacja full-stackowa do kupowania ubrań oraz butów. Autentykacja i autoryzacja użytkowników: JWT. Cachowanie danych z backendu: React-Query. Płatności: Stripe. Użytkownik: wybiera rozmiar i kolor produktu, zarządza koszykiem, składa zamówienia."
         },
@@ -118,6 +122,10 @@
     "projects": {
       "heading": "Projects",
       "cards": [
+        {
+          "title": "Admin Dashboard",
+          "content": "Classic admin dashboard with user authentication. User can see his revenue and users on charts. He can also search for specific orders."
+        },
         {
           "title": "E-commerce clothing store",
           "content": "Full-stack web application for buying clothes and shoes. User authentication and autorization: JWT. Caching backend data: React-Query. Payments: Stripe. User: selects size and color, manages basket, places an order."

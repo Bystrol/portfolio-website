@@ -4,6 +4,7 @@ import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
 import FirstProjectImage from '../../../public/images/project-image-1.png'
 import SecondProjectImage from '../../../public/images/project-image-2.png'
+import AdminDashboardImage from '../../../public/images/admin-dashboard.png'
 import TechnologyBox from '../atoms/TechnologyBox'
 import Link from 'next/link'
 import ArrowTopRight from '../atoms/ArrowTopRight'
@@ -19,6 +20,21 @@ type ProjectsSectionProps = {
 }
 
 const projectsDetails = [
+  {
+    image: AdminDashboardImage,
+    technologies: [
+      'next.js',
+      'react.js',
+      'typescript',
+      'material ui',
+      'clerk',
+      'mongodb',
+      'zustand',
+      'nuqs'
+    ],
+    previewLink: 'https://admin-dashboard-gamma-murex.vercel.app/',
+    githubLink: 'https://github.com/Bystrol/admin-dashboard'
+  },
   {
     image: FirstProjectImage,
     technologies: [

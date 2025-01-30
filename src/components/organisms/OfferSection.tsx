@@ -55,7 +55,7 @@ export default function OfferSection({ translation }: OfferSectionProps) {
       transition={{ duration: 1 }}
       className="relative lg:static h-[200vh] lg:h-screen w-full lg:flex lg:justify-center lg:items-center sm:px-[60px] lg:px-[120px] pb-[60px] lg:pb-0"
     >
-      <div className="sticky lg:static top-0 flex flex-col gap-[25px] pt-[15vh] lg:pt-0 mr-[4.6vw] lg:mr-0 max-w-[1440px] overflow-hidden px-[30px]">
+      <div className="sticky lg:static top-0 flex flex-col gap-[25px] pt-[15vh] lg:pt-0 mr-[4.6vw] lg:mr-0 max-w-[1440px] overflow-hidden px-[30px] lg:px-0">
         <h2
           className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
         >
