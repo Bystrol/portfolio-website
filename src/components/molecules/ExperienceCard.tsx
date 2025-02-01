@@ -65,8 +65,11 @@ export const ExperienceCard = ({
               <span>{`${position} • ${company}`}</span>
             )}
           </div>
-          {translation.experience.duties[translationKey].map((duty) => (
-            <p className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]">
+          {translation.experience.duties[translationKey].map((duty, index) => (
+            <p
+              key={index}
+              className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]"
+            >
               {`• ${duty}`}
             </p>
           ))}
