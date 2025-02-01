@@ -61,7 +61,7 @@ const projectsDetails = [
     ],
     previewLink: 'https://finance-manager-six.vercel.app/',
     githubLink: 'https://github.com/Bystrol/finance-manager'
-  },
+  }
 ]
 
 const containerVariants = {
@@ -91,7 +91,7 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
   return (
     <motion.section
       ref={sectionRef}
-      id={sectionIds[3]}
+      id={sectionIds[4]}
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
@@ -128,7 +128,7 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                   />
                 </Link>
                 <div className="flex flex-col gap-[10px] sm:gap-[20px] sm:w-1/2">
-                  <div className="flex flex-wrap gap-[8px] sm:gap-[13px]">
+                  <div className="flex flex-wrap gap-[8px]">
                     {project.technologies.map((technology, index) => {
                       return <TechnologyBox key={index} text={technology} />
                     })}

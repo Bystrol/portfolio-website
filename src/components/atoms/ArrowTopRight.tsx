@@ -6,7 +6,7 @@ export default function ArrowTopRight() {
       height="21"
       viewBox="0 0 20 21"
       fill="none"
-      className="sm:w-[30px] sm:h-[30px] sm:peer-hover:-translate-y-[3px] sm:peer-hover:translate-x-[3px] transition-all duration-400"
+      className="sm:w-[30px] sm:h-[30px] sm:group-hover:-translate-y-[3px] sm:group-hover:translate-x-[3px] transition-all duration-400"
     >
       <path
         d="M5.87521 6.62723L14.1248 6.62723M14.1248 6.62723L14.1248 14.8768M14.1248 6.62723L5.87521 14.8768"

@@ -1,6 +1,6 @@
 {
   "pl": {
-    "navigation": ["O mnie", "Oferta", "Projekty", "Kontakt"],
+    "navigation": ["O mnie", "Oferta", "Doświadczenie", "Projekty", "Kontakt"],
     "hero": {
       "heading": "Cześć! Miło Cię gościć w moim portfolio",
       "paragraph": "Jestem inżynierem, który aktualnie pracuje na stanowisku front-end developera. Zobacz poniżej jakie usługi mogę ci zaoferować.",
@@ -35,6 +35,28 @@
           "content": "Kodowanie responsywnych maili transakcyjnych i marketingowych, dostosowanych do większości dostępnych skrzynek pocztowych."
         }
       ]
+    },
+    "experience": {
+      "heading": "Doświadczenie",
+      "ongoing": "obecnie",
+      "duties": {
+        "mmc": [
+          "Tworzenie aplikacji do nauki języków obcych w technologiach takich jak React, TypeScript",
+          "Tworzenie responsywnych i skutecznych stron internetowych, generujących leady",
+          "Opracowywanie niestandardowej walidacji formularzy sprzedażowych",
+          "Współpraca z projektantem graficznym w celu zapewnienia najlepszego UX/UI",
+          "Tworzenie szablonów e-mail w HTML",
+          "Optymalizowanie witryn pod kątem wydajności, SEO, dostępności",
+          "Integrowanie stron internetowych z narzędziami analitycznymi, takimi jak Google Analytics, Hotjar"
+        ],
+        "signal": [
+          "Tworzenie paneli administratora, aplikacji mobilnych i szablonów e-mail za pomocą React, React Native i Typescript",
+          "Pisanie testów jednostkowych/integracyjnych przy użyciu Vitest i React Testing Library",
+          "Refaktoryzacja starszego kodu",
+          "Współpraca z product ownerem i projektantem w celu osiągnięcia najlepszego możliwego rezultatu",
+          "Uczestnictwo w kreowaniu finalnej wersji produktu"
+        ]
+      }
     },
     "projects": {
       "heading": "Projekty",
@@ -83,7 +105,7 @@
     }
   },
   "en": {
-    "navigation": ["About", "Offer", "Projects", "Contact"],
+    "navigation": ["About", "Offer", "Experience", "Projects", "Contact"],
     "hero": {
       "heading": "Hi! Welcome to my portfolio",
       "paragraph": "I'm an engineer who is currently working as a front-end developer. See below what services I can offer you.",
@@ -118,6 +140,28 @@
           "content": "Fully responsive email templates adjusted to most of available mailboxes - transactional or marketing messages."
         }
       ]
+    },
+    "experience": {
+      "heading": "Experience",
+      "ongoing": "ongoing",
+      "duties": {
+        "mmc": [
+          "Creating language learning application using technologies such as React, TypeScript",
+          "Creating responsive and effective websites that generate leads",
+          "Developing custom validation for sales forms",
+          "Collaborating with a graphic designer to ensure the best UX/UI",
+          "Creating email templates in HTML",
+          "Optimizing websites for performance, SEO, accessibility",
+          "Integrating websites with analytic tools such as Google Analytics, Hotjar"
+        ],
+        "signal": [
+          "Creating admin dashboards, mobile applications and email templates using React, React Native and Typescript",
+          "Writing unit/integration tests using Vitest and React Testing Library",
+          "Refactoring legacy code",
+          "Collaborating with product owner and designer to achieve the best possible result",
+          "Participating in creating the final version of the product"
+        ]
+      }
     },
     "projects": {
       "heading": "Projects",

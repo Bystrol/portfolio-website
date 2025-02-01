@@ -18,6 +18,14 @@ export type Translation = {
     paragraph: string
     cards: { title: string; content: string }[]
   }
+  experience: {
+    heading: string
+    ongoing: string
+    duties: {
+      mmc: string[]
+      signal: string[]
+    }
+  }
   projects: {
     heading: string
     cards: { title: string; content: string }[]

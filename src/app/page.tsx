@@ -11,6 +11,7 @@ import ContactSection from '@/components/organisms/ContactSection'
 import Footer from '@/components/organisms/Footer'
 import PreloadingAnimation from '@/components/atoms/PreloadingAnimation'
 import SocialMedia from '@/components/molecules/SocialMedia'
+import ExperienceSection from '@/components/organisms/ExperienceSection'
 
 export default function Home() {
   const [showContent, setShowContent] = useState<boolean>(false)
@@ -33,6 +34,7 @@ export default function Home() {
           <HeroSection translation={translation} />
           <AboutSection translation={translation} />
           <OfferSection translation={translation} />
+          <ExperienceSection translation={translation} />
           <ProjectsSection translation={translation} />
           <ContactSection translation={translation} />
           <Footer translation={translation} />
