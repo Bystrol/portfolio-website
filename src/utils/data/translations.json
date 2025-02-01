@@ -10,7 +10,7 @@
     },
     "about": {
       "heading_first": "O mnie",
-      "paragraph_first": "Moja specjalność to tworzenie warstwy front-endowej aplikacji webowych oraz responsywnych stron typu landing/multi page.",
+      "paragraph_first": "Jestem programistą frontend z 2-letnim doświadczeniem komercyjnym w tej dziedzinie. W tym czasie z powodzeniem rozwijałem skalowalne i przyjazne dla użytkownika aplikacje, które pomogły w osiągnięciu celów biznesowych firmy. Chociaż specjalizuję się we frontendzie, rozwijałem również backend dla moich osobistych projektów.",
       "paragraph_second": "Budując projekt najczęściej korzystam z takich technologii jak React.js, Next.js, TypeScript, Node.js.",
       "heading_second": "Technologie"
     },
@@ -115,7 +115,7 @@
     },
     "about": {
       "heading_first": "About",
-      "paragraph_first": "My specialty is front-end layer development of web applications and responsive landing/multi page websites.",
+      "paragraph_first": "I’m a frontend developer with 2 years of commercial experience in this field. During this period I’ve successfully developed scalable and user-friendly applications that helped with achieving the company’s business goals. Even though I specialize in frontend, I have also developed some backend for my personal projects.",
       "paragraph_second": "When building a project, I usually use technologies such as React.js, Next.js, TypeScript, Node.js.",
       "heading_second": "Technologies"
     },
