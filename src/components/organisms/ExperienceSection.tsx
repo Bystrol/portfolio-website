@@ -77,9 +77,8 @@ export default function ExperienceSection({ translation }: Props) {
           {experienceList.map((item, index) => {
             if (item.companyWebsite) {
               return (
-                <Link href={item.companyWebsite} target="_blank">
+                <Link key={index} href={item.companyWebsite} target="_blank">
                   <ExperienceCard
-                    key={index}
                     translation={translation}
                     companyWebsite={item.companyWebsite}
                     startDate={item.startDate}
