@@ -1,6 +1,7 @@
 {
   "pl": {
     "navigation": ["O mnie", "Oferta", "Doświadczenie", "Projekty", "Kontakt"],
+    "downloadCv": "Pobierz CV",
     "hero": {
       "heading": "Cześć! Miło Cię gościć w moim portfolio",
       "paragraph": "Jestem inżynierem, który aktualnie pracuje na stanowisku front-end developera. Zobacz poniżej jakie usługi mogę ci zaoferować.",
@@ -106,6 +107,7 @@
   },
   "en": {
     "navigation": ["About", "Offer", "Experience", "Projects", "Contact"],
+    "downloadCv": "Download resume",
     "hero": {
       "heading": "Hi! Welcome to my portfolio",
       "paragraph": "I'm an engineer who is currently working as a front-end developer. See below what services I can offer you.",

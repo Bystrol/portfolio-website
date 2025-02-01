@@ -1,5 +1,6 @@
 export type Translation = {
   navigation: string[]
+  downloadCv: string
   hero: {
     heading: string
     paragraph: string

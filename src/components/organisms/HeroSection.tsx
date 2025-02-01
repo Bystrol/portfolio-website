@@ -4,6 +4,7 @@ import ArrowDown from '../atoms/ArrowDown'
 import { Unbounded } from 'next/font/google'
 import { Translation } from '@/types/translation'
 import { sectionIds } from '@/utils/data/sectionIds'
+import Link from 'next/link'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -28,11 +29,21 @@ export default function HeroSection({ translation }: HeroSectionProps) {
         <p className="text-center text-[12px] sm:text-[14px] lg:text-[16px] max-w-[346px] sm:max-w-[440px] lg:max-w-[580px] text-white/[.70]">
           {translation.hero.paragraph}
         </p>
-        <CtaButton
-          text={translation.hero.button}
-          handleClick={() => scrollToSection(4)}
-          icon={ArrowDown}
-        />
+        <div className="flex gap-4">
+          <CtaButton
+            text={translation.hero.button}
+            handleClick={() => scrollToSection(5)}
+            icon={ArrowDown}
+          />
+          <Link
+            href="CV_Michał_Bystryk.pdf"
+            download
+            target="_blank"
+            className="rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[14px] sm:text-[18px] lg:text-[20px] mt-[10px] px-[20px] py-[8px] animate-bounce w-max"
+          >
+            {translation.downloadCv}
+          </Link>
+        </div>
       </div>
       <div className="absolute bottom-[30px] flex justify-center w-full px-[30px] sm:px-[60px] lg:px-[120px] animate-slideUp">
         <div
