@@ -137,12 +137,12 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                     <div className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[26px]">
                       <Link
                         href={project.previewLink}
-                        className="peer"
+                        className="peer flex justify-between items-center gap-[6px]"
                         target="_blank"
                       >
                         {translation.projects.cards[index].title}
+                        <ArrowTopRight />
                       </Link>
-                      <ArrowTopRight />
                     </div>
                     <p className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]">
                       {translation.projects.cards[index].content}

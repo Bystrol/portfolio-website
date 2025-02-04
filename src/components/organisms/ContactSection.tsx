@@ -155,10 +155,14 @@ export default function ContactSection({ translation }: ContactSectionProps) {
                   key={index}
                   className="flex items-center gap-[6px] text-[18px] sm:text-[22px] lg:text-[24px]"
                 >
-                  <Link href={social.link} className="peer" target="_blank">
+                  <Link
+                    href={social.link}
+                    className="group flex items-center gap-[6px]"
+                    target="_blank"
+                  >
                     {social.text}
+                    <ArrowTopRight />
                   </Link>
-                  <ArrowTopRight />
                 </div>
               )
             })}
@@ -166,19 +170,13 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
             <Link
               href="mailto:michalbystryk@gmail.com"
-              className="peer"
+              className="group flex gap-[6px] items-center"
               target="_blank"
             >
               michalbystryk@gmail.com
+              <ArrowTopRight />
             </Link>
-            <ArrowTopRight />
           </div>
-          {/* <div className="flex gap-[6px] items-center text-[18px] sm:text-[22px] lg:text-[24px] pt-[12px]">
-            <Link href="tel:+48518432557" className="peer" target="_blank">
-              +48 518 432 557
-            </Link>
-            <ArrowTopRight />
-          </div> */}
         </div>
         <motion.form
           variants={formVariants}

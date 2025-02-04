@@ -3,7 +3,8 @@ export type Translation = {
   downloadCv: string
   hero: {
     heading: string
-    paragraph: string
+    first_paragraph: string
+    second_paragraph: string
     button: string
     availability_first: string
     availability_second: string

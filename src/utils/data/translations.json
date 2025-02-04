@@ -1,18 +1,19 @@
 {
   "pl": {
     "navigation": ["O mnie", "Oferta", "Doświadczenie", "Projekty", "Kontakt"],
-    "downloadCv": "Pobierz CV",
+    "downloadCv": "Zobacz CV",
     "hero": {
-      "heading": "Cześć! Miło Cię gościć w moim portfolio",
-      "paragraph": "Jestem inżynierem, który aktualnie pracuje na stanowisku front-end developera. Zobacz poniżej jakie usługi mogę ci zaoferować.",
+      "heading": "Cześć, tu Michał. 👋 Frontend Developer.",
+      "first_paragraph": "Robię nowoczesny, responsywny i funkcjonalny frontend.",
+      "second_paragraph": "Dyskutuję, angażuję się i wspieram.",
       "button": "Napisz do mnie",
       "availability_first": "Dostępny",
       "availability_second": "od zaraz"
     },
     "about": {
       "heading_first": "O mnie",
-      "paragraph_first": "Jestem programistą frontend z 2-letnim doświadczeniem komercyjnym w tej dziedzinie. W tym czasie z powodzeniem rozwijałem skalowalne i przyjazne dla użytkownika aplikacje, które pomogły w osiągnięciu celów biznesowych firmy. Chociaż specjalizuję się we frontendzie, rozwijałem również backend dla moich osobistych projektów.",
-      "paragraph_second": "Budując projekt najczęściej korzystam z takich technologii jak React.js, Next.js, TypeScript, Node.js.",
+      "paragraph_first": "Jestem programistą frontend z 2-letnim doświadczeniem komercyjnym w tej dziedzinie. W tym czasie z powodzeniem rozwijałem skalowalne i przyjazne dla użytkownika aplikacje, które pomogły w osiągnięciu celów biznesowych firmy. Mimo, że specjalizuję się we frontendzie, rozwijałem również backend dla moich osobistych projektów.",
+      "paragraph_second": "Po pracy lubię spędzać czas na siłowni, spacerować lub degustować kuchnię azjatycką.",
       "heading_second": "Technologie"
     },
     "offer": {
@@ -21,19 +22,19 @@
       "cards": [
         {
           "title": "Strony internetowe",
-          "content": "Tworzę responsywne strony internetowe, korzystając z nowoczesnych technologii. Dostosuję je do wskazanych przez Ciebie standardów i Twoich potrzeb."
+          "content": "Responsywne i oparte na nowoczesnych technologiach wspierających SEO. Dostosowane do wskazanych przez Ciebie standardów i Twoich potrzeb."
         },
         {
           "title": "Aplikacje webowe",
-          "content": "Moje aplikacje dla firm są w pełni funkcjonalne i realizują założenia biznesowe. Tworzę je głównie w stacku MERN."
+          "content": "W pełni funkcjonalne, spełniające założenia biznesowe. Technologie dostosowane do wymagań projektu."
         },
         {
           "title": "Utrzymanie",
-          "content": "Utrzymanie od A do Z - hosting, domena, wdrożenie, utrzymanie i konserwacja, zabezpieczenie przed wirusami, SEO, SSL, analityka, testy A/B."
+          "content": "Od A do Z: hosting, domena, SSL, wdrożenie, utrzymanie i konserwacja, analityka, testy A/B."
         },
         {
           "title": "Szablony mailowe",
-          "content": "Kodowanie responsywnych maili transakcyjnych i marketingowych, dostosowanych do większości dostępnych skrzynek pocztowych."
+          "content": "Responsywne maile transakcyjne i marketingowe. Dostosowane do większości dostępnych skrzynek pocztowych."
         }
       ]
     },
@@ -42,20 +43,20 @@
       "ongoing": "obecnie",
       "duties": {
         "mmc": [
-          "Tworzenie aplikacji do nauki języków obcych w technologiach takich jak React, TypeScript",
-          "Tworzenie responsywnych i skutecznych stron internetowych, generujących leady",
-          "Opracowywanie niestandardowej walidacji formularzy sprzedażowych",
-          "Współpraca z projektantem graficznym w celu zapewnienia najlepszego UX/UI",
-          "Tworzenie szablonów e-mail w HTML",
-          "Optymalizowanie witryn pod kątem wydajności, SEO, dostępności",
-          "Integrowanie stron internetowych z narzędziami analitycznymi, takimi jak Google Analytics, Hotjar"
+          "Tworzenie aplikacji do nauki języków obcych w technologiach takich jak React, Typescript.",
+          "Tworzenie responsywnych i skutecznych stron internetowych generujących leady.",
+          "Opracowywanie niestandardowej walidacji formularzy sprzedażowych.",
+          "Współpraca z projektantem graficznym w celu zapewnienia najlepszego UX i UI.",
+          "Tworzenie szablonów e-mail w HTML.",
+          "Optymalizowanie witryn pod kątem wydajności, SEO i dostępności.",
+          "Integrowanie stron internetowych z narzędziami analitycznymi, takimi jak Google Analytics i Hotjar."
         ],
         "signal": [
-          "Tworzenie paneli administratora, aplikacji mobilnych i szablonów e-mail za pomocą React, React Native i Typescript",
-          "Pisanie testów jednostkowych/integracyjnych przy użyciu Vitest i React Testing Library",
-          "Refaktoryzacja starszego kodu",
-          "Współpraca z product ownerem i projektantem w celu osiągnięcia najlepszego możliwego rezultatu",
-          "Uczestnictwo w kreowaniu finalnej wersji produktu"
+          "Tworzenie paneli administratora, aplikacji mobilnych i szablonów e-mail za pomocą React, React Native i Typescript.",
+          "Pisanie testów jednostkowych/integracyjnych przy użyciu Vitest i React Testing Library.",
+          "Refaktoryzacja starszego kodu.",
+          "Stała współpraca z Product Ownerem i Designerem w celu osiągnięcia najlepszego możliwego rezultatu.",
+          "Udział w kreowaniu finalnej wersji produktu."
         ]
       }
     },
@@ -64,11 +65,11 @@
       "cards": [
         {
           "title": "Panel administracyjny",
-          "content": "Klasyczny panel administracyjny z autentykacją użytkownika. Użytkownik widzi swoje przychody i użytkowników na wykresach. Może również wyszukać konkretne zamówienia."
+          "content": "Klasyczny panel administracyjny z autentykacją użytkownika. Użytkownik: widzi przychody, wydatki i użytkowników na wykresach, wyszukuje konkretne zamówienia."
         },
         {
           "title": "Internetowy sklep odzieżowy",
-          "content": "Aplikacja full-stackowa do kupowania ubrań oraz butów. Autentykacja i autoryzacja użytkowników: JWT. Cachowanie danych z backendu: React-Query. Płatności: Stripe. Użytkownik: wybiera rozmiar i kolor produktu, zarządza koszykiem, składa zamówienia."
+          "content": "Aplikacja full-stackowa do kupowania ubrań i butów. Autentykacja i autoryzacja użytkowników: JWT. Cachowanie danych z backendu: React-Query. Płatności: Stripe. Użytkownik: wybiera rozmiar i kolor produktu, zarządza koszykiem, składa zamówienia."
         },
         {
           "title": "FINEances - menedżer finansów",
@@ -107,10 +108,11 @@
   },
   "en": {
     "navigation": ["About", "Offer", "Experience", "Projects", "Contact"],
-    "downloadCv": "Download resume",
+    "downloadCv": "Show resume",
     "hero": {
-      "heading": "Hi! Welcome to my portfolio",
-      "paragraph": "I'm an engineer who is currently working as a front-end developer. See below what services I can offer you.",
+      "heading": "Hi, I'm Michał. 👋 Frontend Developer.",
+      "first_paragraph": "I create modern, responsive and functional frontend.",
+      "second_paragraph": "I discuss, engage and support.",
       "button": "Contact me",
       "availability_first": "Available",
       "availability_second": "to work"
@@ -118,7 +120,7 @@
     "about": {
       "heading_first": "About",
       "paragraph_first": "I’m a frontend developer with 2 years of commercial experience in this field. During this period I’ve successfully developed scalable and user-friendly applications that helped with achieving the company’s business goals. Even though I specialize in frontend, I have also developed some backend for my personal projects.",
-      "paragraph_second": "When building a project, I usually use technologies such as React.js, Next.js, TypeScript, Node.js.",
+      "paragraph_second": "After work, I like to spend time at the gym, walk or taste Asian cuisine.",
       "heading_second": "Technologies"
     },
     "offer": {
@@ -127,19 +129,19 @@
       "cards": [
         {
           "title": "Websites",
-          "content": "I use top-notch technologies to build responsive websites. To meet your expectations, I'll match them with your standards and needs."
+          "content": "Responsive and based on modern technologies supporting SEO. Adjusted to the standards you set and your needs."
         },
         {
           "title": "Web applications",
-          "content": "My fully-fledged web applications are functional and fulfill the business goals set at the beginning of the project. I use mainly the MERN stack."
+          "content": "Fully functional, meeting business requirements. Technologies adjusted to the project's needs."
         },
         {
           "title": "Maintanance",
-          "content": "Maintanance from A to Z - hosting, domain, implementation, maintenance and upkeep, virus protection, SEO, SSL, analytics, A/B testing."
+          "content": "From A to Z: hosting, domain, SSL, deployment, maintenance and service, analytics, A/B tests."
         },
         {
           "title": "Email templates",
-          "content": "Fully responsive email templates adjusted to most of available mailboxes - transactional or marketing messages."
+          "content": "Responsive transactional and marketing emails. Adjusted to most available mailboxes."
         }
       ]
     },
@@ -148,20 +150,20 @@
       "ongoing": "ongoing",
       "duties": {
         "mmc": [
-          "Creating language learning application using technologies such as React, TypeScript",
-          "Creating responsive and effective websites that generate leads",
-          "Developing custom validation for sales forms",
-          "Collaborating with a graphic designer to ensure the best UX/UI",
-          "Creating email templates in HTML",
-          "Optimizing websites for performance, SEO, accessibility",
-          "Integrating websites with analytic tools such as Google Analytics, Hotjar"
+          "Creating language learning application using technologies such as React, Typescript.",
+          "Creating responsive and effective websites that generate leads.",
+          "Developing custom validation for sales forms.",
+          "Collaborating with a graphic designer to ensure the best UX and UI.",
+          "Creating email templates in HTML.",
+          "Optimizing websites for performance, SEO and accessibility.",
+          "Integrating websites with analytic tools such as Google Analytics and Hotjar."
         ],
         "signal": [
-          "Creating admin dashboards, mobile applications and email templates using React, React Native and Typescript",
-          "Writing unit/integration tests using Vitest and React Testing Library",
-          "Refactoring legacy code",
-          "Collaborating with product owner and designer to achieve the best possible result",
-          "Participating in creating the final version of the product"
+          "Creating admin dashboards, mobile applications and email templates using React, React Native and Typescript.",
+          "Writing unit/integration tests using Vitest and React Testing Library.",
+          "Refactoring legacy code.",
+          "Collaborating with Product Owner and Designer to achieve the best possible result.",
+          "Participating in creating the final version of the product."
         ]
       }
     },
@@ -170,7 +172,7 @@
       "cards": [
         {
           "title": "Admin Dashboard",
-          "content": "Classic admin dashboard with user authentication. User can see his revenue and users on charts. He can also search for specific orders."
+          "content": "Classic admin dashboard with user authentication. User: sees revenues, expenses and users on charts, searches for specific orders."
         },
         {
           "title": "E-commerce clothing store",
