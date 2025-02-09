@@ -153,6 +153,7 @@ export const Navbar = () => {
                       quality={100}
                       width={20}
                       height={20}
+                      priority
                     />
                   </div>
                 }
@@ -164,6 +165,7 @@ export const Navbar = () => {
                       quality={100}
                       width={20}
                       height={20}
+                      priority
                     />
                   </div>
                 }
