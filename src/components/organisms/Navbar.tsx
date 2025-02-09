@@ -26,11 +26,11 @@ export const Navbar = () => {
   const [isMobileNavigationVisible, setIsMobileNavigationVisible] =
     useState<boolean>(false)
 
-  const handleScroll = useCallback(() => {
-    let lastScrollY = window.scrollY
-    let totalScrolled = 0
-    let scrollingDown = false
+  let lastScrollY = window.scrollY
+  let totalScrolled = 0
+  let scrollingDown = false
 
+  const handleScroll = useCallback(() => {
     const navbarElement = document.getElementById('navbar')
 
     if (!isMobileNavigationVisible) {
@@ -153,7 +153,6 @@ export const Navbar = () => {
                       quality={100}
                       width={20}
                       height={20}
-                      priority
                     />
                   </div>
                 }
@@ -165,7 +164,6 @@ export const Navbar = () => {
                       quality={100}
                       width={20}
                       height={20}
-                      priority
                     />
                   </div>
                 }
