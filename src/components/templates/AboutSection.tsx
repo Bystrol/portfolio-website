@@ -1,26 +1,23 @@
-import { Translation } from '@/types/translation'
-import { sectionIds } from '@/utils/data/sectionIds'
+'use client'
+
 import { Unbounded } from 'next/font/google'
 import TechnologyBox from '../atoms/TechnologyBox'
 import Image from 'next/image'
 import PortraitImg from '../../../public/images/portrait.png'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useI18n } from '@/locales/client'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
-
-type AboutSectionProps = {
-  translation: Translation
-}
 
 const technologies: string[] = [
   'Next.js',
   'React.js',
   'Typescript',
   'Express.js',
-  'Nosql',
+  'Nosql'
 ]
 
 const containerVariants = {
@@ -54,13 +51,14 @@ const textVariants = {
   }
 }
 
-export default function AboutSection({ translation }: AboutSectionProps) {
+export const AboutSection = () => {
+  const t = useI18n()
   const containerRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(containerRef, { once: true, amount: 0.2 })
 
   return (
     <section
-      id={sectionIds[1]}
+      id="about"
       className="w-full sm:h-screen sm:flex sm:items-center sm:justify-center px-[30px] sm:px-[60px] lg:px-[120px] py-[60px] sm:py-0"
     >
       <motion.div
@@ -76,7 +74,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
             <h2
               className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
             >
-              {translation.about.heading_first}
+              {t('common.about.heading_first')}
             </h2>
             <motion.p
               initial="hidden"
@@ -84,7 +82,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
               transition={{ staggerChildren: 0.01 }}
               className="sm:text-[18px] lg:text-[24px]"
             >
-              {translation.about.paragraph_first
+              {t('common.about.paragraph_first')
                 .split('')
                 .map((char, index) => (
                   <motion.span variants={textVariants} key={index}>
@@ -98,7 +96,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
               transition={{ staggerChildren: 0.01 }}
               className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]"
             >
-              {translation.about.paragraph_second
+              {t('common.about.paragraph_second')
                 .split('')
                 .map((char, index) => (
                   <motion.span variants={textVariants} key={index}>
@@ -111,7 +109,7 @@ export default function AboutSection({ translation }: AboutSectionProps) {
             <h3
               className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
             >
-              {translation.about.heading_second}
+              {t('common.about.heading_second')}
             </h3>
             <div className="flex items-center flex-wrap gap-[8px] sm:gap-[13px]">
               {technologies.map((technology, index) => {
@@ -128,7 +126,13 @@ export default function AboutSection({ translation }: AboutSectionProps) {
           transition={{ duration: 1, delay: 0.3 }}
           className="w-[250px] sm:w-[287px] lg:w-[386px]"
         >
-          <Image src={PortraitImg} alt="portrait" quality={100} priority />
+          <Image
+            src={PortraitImg}
+            alt="Picture with my portrait"
+            quality={100}
+            width={772}
+            height={976}
+          />
         </motion.div>
       </motion.div>
     </section>

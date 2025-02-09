@@ -5,7 +5,8 @@ import { Toaster } from 'react-hot-toast'
 import type { Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import ClarityTag from '@/components/others/ClarityTag'
+import ClarityTag from '@/scripts/ClarityTag'
+import { getCurrentLocale } from '@/locales/server'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,13 +32,15 @@ export const viewport: Viewport = {
   userScalable: false
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: {
   children: React.ReactNode
 }) {
+  const locale = await getCurrentLocale()
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <Toaster position="bottom-center" toastOptions={{ duration: 3000 }} />
         {children}

@@ -1,5 +1,5 @@
-import { Translation } from '@/types/translation'
-import { sectionIds } from '@/utils/data/sectionIds'
+'use client'
+
 import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
 import FirstProjectImage from '../../../public/images/project-image-1.png'
@@ -10,59 +10,11 @@ import Link from 'next/link'
 import ArrowTopRight from '../atoms/ArrowTopRight'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useI18n } from '@/locales/client'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
-
-type ProjectsSectionProps = {
-  translation: Translation
-}
-
-const projectsDetails = [
-  {
-    image: AdminDashboardImage,
-    technologies: [
-      'next.js',
-      'react.js',
-      'typescript',
-      'material ui',
-      'clerk',
-      'mongodb',
-      'zustand',
-      'nuqs'
-    ],
-    previewLink: 'https://admin-dashboard-gamma-murex.vercel.app/',
-    githubLink: 'https://github.com/Bystrol/admin-dashboard'
-  },
-  {
-    image: FirstProjectImage,
-    technologies: [
-      'react.js',
-      'typescript',
-      'redux',
-      'react-Query',
-      'express.js',
-      'mongodb'
-    ],
-    previewLink: 'https://ecommerce-store-client.onrender.com/',
-    githubLink: 'https://github.com/Bystrol/ecommerce-store-client'
-  },
-  {
-    image: SecondProjectImage,
-    technologies: [
-      'next.js',
-      'typescript',
-      'redux',
-      'tailwind',
-      'next-auth',
-      'mongodb',
-      'prisma'
-    ],
-    previewLink: 'https://finance-manager-six.vercel.app/',
-    githubLink: 'https://github.com/Bystrol/finance-manager'
-  }
-]
 
 const containerVariants = {
   hidden: {
@@ -84,14 +36,69 @@ const cardVariants = {
   }
 }
 
-export default function ProjectsSection({ translation }: ProjectsSectionProps) {
+export const ProjectsSection = () => {
+  const t = useI18n()
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { amount: 0.1, once: true })
 
+  const projectsDetails = [
+    {
+      id: 'dashboard',
+      image: AdminDashboardImage,
+      title: t('common.projects.cards.dashboard.title'),
+      content: t('common.projects.cards.dashboard.content'),
+      technologies: [
+        'next.js',
+        'react.js',
+        'typescript',
+        'material ui',
+        'clerk',
+        'mongodb',
+        'zustand',
+        'nuqs'
+      ],
+      previewLink: 'https://admin-dashboard-gamma-murex.vercel.app/',
+      githubLink: 'https://github.com/Bystrol/admin-dashboard'
+    },
+    {
+      id: 'ecommerce',
+      image: FirstProjectImage,
+      title: t('common.projects.cards.ecommerce.title'),
+      content: t('common.projects.cards.ecommerce.content'),
+      technologies: [
+        'react.js',
+        'typescript',
+        'redux',
+        'react-Query',
+        'express.js',
+        'mongodb'
+      ],
+      previewLink: 'https://ecommerce-store-client.onrender.com/',
+      githubLink: 'https://github.com/Bystrol/ecommerce-store-client'
+    },
+    {
+      id: 'finance',
+      image: SecondProjectImage,
+      title: t('common.projects.cards.finance.title'),
+      content: t('common.projects.cards.finance.content'),
+      technologies: [
+        'next.js',
+        'typescript',
+        'redux',
+        'tailwind',
+        'next-auth',
+        'mongodb',
+        'prisma'
+      ],
+      previewLink: 'https://finance-manager-six.vercel.app/',
+      githubLink: 'https://github.com/Bystrol/finance-manager'
+    }
+  ]
+
   return (
     <motion.section
+      id="projects"
       ref={sectionRef}
-      id={sectionIds[4]}
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
@@ -102,13 +109,13 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
         <h2
           className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase pb-[20px] sm:pb-[25px]`}
         >
-          {translation.projects.heading}
+          {t('common.projects.heading')}
         </h2>
         <div className="flex flex-col gap-[40px] pr-[4.6vw] sm:pr-0">
-          {projectsDetails.map((project, index) => {
+          {projectsDetails.map((project) => {
             return (
               <motion.div
-                key={index}
+                key={project.id}
                 variants={cardVariants}
                 initial="hidden"
                 transition={{ duration: 0.5 }}
@@ -122,9 +129,11 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                 >
                   <Image
                     src={project.image}
-                    alt={project.technologies[0]}
+                    alt={`Preview image of the ${project.id} project`}
                     quality={100}
                     className="rounded-lg sm:rounded-xl sm:group-hover:scale-105 transition-all duration-500"
+                    width={1920}
+                    height={958}
                   />
                 </Link>
                 <div className="flex flex-col gap-[10px] sm:gap-[20px] sm:w-1/2">
@@ -140,21 +149,21 @@ export default function ProjectsSection({ translation }: ProjectsSectionProps) {
                         className="peer flex justify-between items-center gap-[6px]"
                         target="_blank"
                       >
-                        {translation.projects.cards[index].title}
+                        {project.title}
                         <ArrowTopRight />
                       </Link>
                     </div>
                     <p className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]">
-                      {translation.projects.cards[index].content}
+                      {project.content}
                     </p>
                   </div>
-                  {project.githubLink !== '' && (
+                  {!!project.githubLink ? (
                     <Link href={project.githubLink} target="_blank">
                       <button className="flex px-[15px] py-[6px] sm:px-[30px] sm:py-[8px] rounded-full border border-[#2960F8] bg-gradient-to-r from-[#5035DA] to-[#2960F8] sm:hover:drop-shadow-blue text-[12px] sm:text-[16px] transition-all duration-200">
-                        {translation.projects.button}
+                        {t('common.projects.button')}
                       </button>
                     </Link>
-                  )}
+                  ) : null}
                 </div>
               </motion.div>
             )

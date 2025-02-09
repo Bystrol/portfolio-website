@@ -1,25 +1,22 @@
+'use client'
+
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { sectionIds } from '@/utils/data/sectionIds'
 import { Unbounded } from 'next/font/google'
 import Link from 'next/link'
-import { Translation } from '@/types/translation'
-import { githubLink, linkedinLink } from '@/utils/constants/socialMediaLinks'
+import { githubLink, linkedinLink } from '@/constants/socialMediaLinks'
 import ArrowTopRight from '../atoms/ArrowTopRight'
 import useContactForm from '@/hooks/useContactForm'
 import FormInput from '../molecules/FormInput'
-import { validateInput } from '@/utils/functions/validateInput'
+import { validateInput } from '@/utils/validateInput'
 import toast from 'react-hot-toast'
-import { UpdatedInvalid } from '@/types/form'
+import { UpdatedInvalid } from '@/types/ContactFormData'
 import { ClipLoader } from 'react-spinners'
+import { useI18n } from '@/locales/client'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
-
-type ContactSectionProps = {
-  translation: Translation
-}
 
 const socialMedia = [
   {
@@ -56,7 +53,8 @@ const formVariants = {
 
 let isInitial = true
 
-export default function ContactSection({ translation }: ContactSectionProps) {
+export const ContactSection = () => {
+  const t = useI18n()
   const [isSendingEmail, setIsSendingEmail] = useState<boolean>(false)
   const [flashInvalidInput, setFlashInvalidInput] = useState(false)
   const {
@@ -84,10 +82,10 @@ export default function ContactSection({ translation }: ContactSectionProps) {
         setContactFormData(initialContactFormData)
         if (res.ok) {
           toast.success(
-            contactFormData.name + ', ' + translation.contact.successMessage
+            contactFormData.name + ', ' + t('common.contact.successMessage')
           )
         } else {
-          toast.error(translation.contact.errorMessage)
+          toast.error(t('common.contact.errorMessage'))
         }
       })
     } else {
@@ -99,7 +97,10 @@ export default function ContactSection({ translation }: ContactSectionProps) {
         }
 
         for (let key in updatedInvalid) {
-          updatedInvalid[key] = !validateInput(key, contactFormData[key])
+          updatedInvalid[key as keyof UpdatedInvalid] = !validateInput(
+            key,
+            contactFormData[key as keyof UpdatedInvalid]
+          )
         }
 
         return {
@@ -125,12 +126,12 @@ export default function ContactSection({ translation }: ContactSectionProps) {
   const buttonContent = isSendingEmail ? (
     <ClipLoader color="#fff" size={25} />
   ) : (
-    translation.contact.button
+    t('common.contact.button')
   )
 
   return (
     <motion.section
-      id={sectionIds[5]}
+      id="contact"
       ref={sectionRef}
       variants={containerVariants}
       initial="hidden"
@@ -143,10 +144,10 @@ export default function ContactSection({ translation }: ContactSectionProps) {
           <h2
             className={`${unbounded.className} text-[24px] sm:text-[28px] lg:text-[42px] uppercase pb-[20px]`}
           >
-            {translation.contact.heading}
+            {t('common.contact.heading')}
           </h2>
           <p className="text-[14px] lg:text-[18px] pb-[45px] lg:pb-[65px] text-white/[.70]">
-            {translation.contact.paragraph}
+            {t('common.contact.paragraph')}
           </p>
           <div className="flex gap-[12px] lg:gap-[15px]">
             {socialMedia.map((social, index) => {
@@ -192,12 +193,12 @@ export default function ContactSection({ translation }: ContactSectionProps) {
                 key={index}
                 tag={input.tag}
                 id={input.id}
-                translation={translation}
                 value={input.value}
+                label={input.label}
+                errorMessage={input.errorMessage}
                 isInvalid={input.isInvalid}
                 onChange={input.onChange}
                 onBlur={input.onBlur}
-                index={index}
                 flashInvalidInput={flashInvalidInput}
               />
             )

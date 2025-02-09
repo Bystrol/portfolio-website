@@ -1,18 +1,17 @@
-import { Translation } from '@/types/translation'
 import { motion } from 'framer-motion'
 import { Unbounded } from 'next/font/google'
 import ArrowTopRight from '../atoms/ArrowTopRight'
 import TechnologyBox from '../atoms/TechnologyBox'
+import { useI18n } from '@/locales/client'
 
 type Props = {
-  translation: Translation
   companyWebsite?: string
   startDate: string
   endDate: string | undefined
   position: string
   company: string
-  translationKey: 'mmc' | 'signal'
   technologies: string[]
+  duties: string[]
 }
 
 const unbounded = Unbounded({
@@ -29,15 +28,16 @@ const cardVariants = {
 }
 
 export const ExperienceCard = ({
-  translation,
   companyWebsite,
   startDate,
   endDate,
   position,
   company,
-  translationKey,
-  technologies
+  technologies,
+  duties
 }: Props) => {
+  const t = useI18n()
+
   return (
     <motion.div
       variants={cardVariants}
@@ -51,7 +51,7 @@ export const ExperienceCard = ({
       <p
         className={`${unbounded.className} text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70] min-w-[200px]`}
       >
-        {`${startDate} - ${endDate ?? translation.experience.ongoing}`}
+        {`${startDate} - ${endDate ?? t('common.experience.ongoing')}`}
       </p>
       <div className="flex flex-col gap-[10px] sm:gap-[20px]">
         <div className="flex flex-col gap-[10px]">
@@ -65,7 +65,7 @@ export const ExperienceCard = ({
               <span>{`${position} • ${company}`}</span>
             )}
           </div>
-          {translation.experience.duties[translationKey].map((duty, index) => (
+          {duties.map((duty, index) => (
             <p
               key={index}
               className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/[.70]"

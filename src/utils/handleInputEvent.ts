@@ -1,6 +1,6 @@
-import { ContactFormData } from '@/types/form'
+import { ContactFormData } from '@/types/ContactFormData'
 import { validateInput } from './validateInput'
-import { UpdatedInvalid } from '@/types/form'
+import { UpdatedInvalid } from '@/types/ContactFormData'
 
 export const handleInputEvent = (
   event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -16,10 +16,10 @@ export const handleInputEvent = (
     }
 
     if (event.type === 'change') {
-      updatedInvalid[id] =
+      updatedInvalid[id as keyof UpdatedInvalid] =
         !validateInput(id, value) && prevFormData.inputTouched[id]
     } else if (event.type === 'blur') {
-      updatedInvalid[id] = !validateInput(id, value)
+      updatedInvalid[id as keyof UpdatedInvalid] = !validateInput(id, value)
     }
 
     return {

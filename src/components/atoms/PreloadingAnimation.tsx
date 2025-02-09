@@ -1,9 +1,11 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import Lottie from 'react-lottie'
 import mobileRibbonAnimation from '../../lotties/ribbon-mobile.json'
 import desktopRibbonAnimation from '../../lotties/ribbon-desktop.json'
 
-export default function PreloadingAnimation() {
+export const PreloadingAnimation = () => {
   const [isMobileDevice, setIsMobileDevice] = useState<boolean>()
 
   useEffect(() => {

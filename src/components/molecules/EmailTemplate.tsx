@@ -1,9 +1,9 @@
-type EmailTemplateProps = {
+type Props = {
   email: string
   message: string
 }
 
-export default function EmailTemplate({ email, message }: EmailTemplateProps) {
+export default function EmailTemplate({ email, message }: Props) {
   return (
     <div>
       <p>Email: {email}</p>

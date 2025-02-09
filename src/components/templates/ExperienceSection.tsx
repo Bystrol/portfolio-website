@@ -1,46 +1,15 @@
-import { Translation } from '@/types/translation'
-import { sectionIds } from '@/utils/data/sectionIds'
+'use client'
+
 import { Unbounded } from 'next/font/google'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { ExperienceCard } from '../molecules/ExperienceCard'
 import Link from 'next/link'
+import { useI18n } from '@/locales/client'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
-
-type Props = {
-  translation: Translation
-}
-
-const experienceList = [
-  {
-    position: 'Frontend Developer',
-    company: 'SignalOS',
-    companyWebsite: 'https://www.signalos.io/',
-    startDate: '03.2024',
-    translationKey: 'signal' as const,
-    technologies: [
-      'React',
-      'React Native',
-      'Next',
-      'Typescript',
-      'Zustand',
-      'Material UI',
-      'Tanstack Query',
-      'Vitest'
-    ]
-  },
-  {
-    position: 'Frontend Developer',
-    company: 'Mobile Marketing Center',
-    startDate: '01.2023',
-    endDate: '12.2023',
-    translationKey: 'mmc' as const,
-    technologies: ['React', 'Typescript', 'Redux', 'Styled Components', 'SCSS']
-  }
-]
 
 const containerVariants = {
   hidden: {
@@ -53,14 +22,67 @@ const containerVariants = {
   }
 }
 
-export default function ExperienceSection({ translation }: Props) {
+export const ExperienceSection = () => {
+  const t = useI18n()
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { amount: 0.1, once: true })
 
+  const experienceList = [
+    {
+      id: 'signal',
+      position: 'Frontend Developer',
+      company: 'SignalOS',
+      companyWebsite: 'https://www.signalos.io/',
+      startDate: '03.2024',
+      translationKey: 'signal',
+      technologies: [
+        'React',
+        'React Native',
+        'Next',
+        'Typescript',
+        'Zustand',
+        'Material UI',
+        'Tanstack Query',
+        'Vitest'
+      ],
+      duties: [
+        t('common.experience.duties.signal.1'),
+        t('common.experience.duties.signal.2'),
+        t('common.experience.duties.signal.3'),
+        t('common.experience.duties.signal.4'),
+        t('common.experience.duties.signal.5')
+      ]
+    },
+    {
+      id: 'mmc',
+      position: 'Frontend Developer',
+      company: 'Mobile Marketing Center',
+      startDate: '01.2023',
+      endDate: '12.2023',
+      translationKey: 'mmc',
+      technologies: [
+        'React',
+        'Typescript',
+        'Redux',
+        'Styled Components',
+        'SCSS'
+      ],
+      duties: [
+        t('common.experience.duties.mmc.1'),
+        t('common.experience.duties.mmc.2'),
+        t('common.experience.duties.mmc.3'),
+        t('common.experience.duties.mmc.4'),
+        t('common.experience.duties.mmc.5'),
+        t('common.experience.duties.mmc.6'),
+        t('common.experience.duties.mmc.7')
+      ]
+    }
+  ]
+
   return (
     <motion.section
+      id="experience"
       ref={sectionRef}
-      id={sectionIds[3]}
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
@@ -71,22 +93,21 @@ export default function ExperienceSection({ translation }: Props) {
         <h2
           className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase pb-[20px] sm:pb-[25px]`}
         >
-          {translation.experience.heading}
+          {t('common.experience.heading')}
         </h2>
         <div className="flex flex-col gap-[40px] pr-[4.6vw] sm:pr-0">
-          {experienceList.map((item, index) => {
+          {experienceList.map((item) => {
             if (item.companyWebsite) {
               return (
-                <Link key={index} href={item.companyWebsite} target="_blank">
+                <Link key={item.id} href={item.companyWebsite} target="_blank">
                   <ExperienceCard
-                    translation={translation}
                     companyWebsite={item.companyWebsite}
                     startDate={item.startDate}
                     endDate={item.endDate}
                     position={item.position}
                     company={item.company}
-                    translationKey={item.translationKey}
                     technologies={item.technologies}
+                    duties={item.duties}
                   />
                 </Link>
               )
@@ -94,14 +115,13 @@ export default function ExperienceSection({ translation }: Props) {
 
             return (
               <ExperienceCard
-                key={index}
-                translation={translation}
+                key={item.id}
                 startDate={item.startDate}
                 endDate={item.endDate}
                 position={item.position}
                 company={item.company}
-                translationKey={item.translationKey}
                 technologies={item.technologies}
+                duties={item.duties}
               />
             )
           })}

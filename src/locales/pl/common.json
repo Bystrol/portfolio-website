@@ -1,0 +1,120 @@
+{
+  "navigation": {
+    "about": "O mnie",
+    "offer": "Oferta",
+    "experience": "Doświadczenie",
+    "projects": "Projekty",
+    "contact": "Kontakt",
+    "blog": "Blog"
+  },
+  "downloadCv": "Zobacz CV",
+  "hero": {
+    "heading": "Cześć, tu Michał. 👋 Frontend Developer.",
+    "first_paragraph": "Robię nowoczesny, responsywny i funkcjonalny frontend.",
+    "second_paragraph": "Dyskutuję, angażuję się i wspieram.",
+    "button": "Napisz do mnie",
+    "availability_first": "Dostępny",
+    "availability_second": "od zaraz"
+  },
+  "about": {
+    "heading_first": "O mnie",
+    "paragraph_first": "Jestem programistą frontend z 2-letnim doświadczeniem komercyjnym w tej dziedzinie. W tym czasie z powodzeniem rozwijałem skalowalne i przyjazne dla użytkownika aplikacje, które pomogły w osiągnięciu celów biznesowych firmy. Mimo, że specjalizuję się we frontendzie, rozwijałem również backend dla moich osobistych projektów.",
+    "paragraph_second": "Po pracy lubię spędzać czas na siłowni, spacerować lub degustować kuchnię azjatycką.",
+    "heading_second": "Technologie"
+  },
+  "offer": {
+    "heading": "Oferta",
+    "paragraph": "Do każdej współpracy podchodzę kompleksowo, personalnie i z sumiennością wyniesioną ze studiów inżynierskich. Zobacz, co mogę dla Ciebie zrobić:",
+    "cards": {
+      "websites": {
+        "title": "Strony internetowe",
+        "content": "Responsywne i oparte na nowoczesnych technologiach wspierających SEO. Dostosowane do wskazanych przez Ciebie standardów i Twoich potrzeb."
+      },
+      "webApplications": {
+        "title": "Aplikacje webowe",
+        "content": "W pełni funkcjonalne, spełniające założenia biznesowe. Technologie dostosowane do wymagań projektu."
+      },
+      "maintenance": {
+        "title": "Utrzymanie",
+        "content": "Od A do Z: hosting, domena, SSL, wdrożenie, utrzymanie i konserwacja, analityka, testy A/B."
+      },
+      "emailTemplates": {
+        "title": "Szablony mailowe",
+        "content": "Responsywne maile transakcyjne i marketingowe. Dostosowane do większości dostępnych skrzynek pocztowych."
+      }
+    }
+  },
+  "experience": {
+    "heading": "Doświadczenie",
+    "ongoing": "obecnie",
+    "duties": {
+      "mmc": {
+        "1": "Tworzenie aplikacji do nauki języków obcych w technologiach takich jak React, Typescript.",
+        "2": "Tworzenie responsywnych i skutecznych stron internetowych generujących leady.",
+        "3": "Opracowywanie niestandardowej walidacji formularzy sprzedażowych.",
+        "4": "Współpraca z projektantem graficznym w celu zapewnienia najlepszego UX i UI.",
+        "5": "Tworzenie szablonów e-mail w HTML.",
+        "6": "Optymalizowanie witryn pod kątem wydajności, SEO i dostępności.",
+        "7": "Integrowanie stron internetowych z narzędziami analitycznymi, takimi jak Google Analytics i Hotjar."
+      },
+      "signal": {
+        "1": "Tworzenie paneli administratora, aplikacji mobilnych i szablonów e-mail za pomocą React, React Native i Typescript.",
+        "2": "Pisanie testów jednostkowych/integracyjnych przy użyciu Vitest i React Testing Library.",
+        "3": "Refaktoryzacja starszego kodu.",
+        "4": "Stała współpraca z Product Ownerem i Designerem w celu osiągnięcia najlepszego możliwego rezultatu.",
+        "5": "Udział w kreowaniu finalnej wersji produktu."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Projekty",
+    "cards": {
+      "dashboard": {
+        "title": "Panel administracyjny",
+        "content": "Klasyczny panel administracyjny z autentykacją użytkownika. Użytkownik: widzi przychody, wydatki i użytkowników na wykresach, wyszukuje konkretne zamówienia."
+      },
+      "ecommerce": {
+        "title": "Internetowy sklep odzieżowy",
+        "content": "Aplikacja full-stackowa do kupowania ubrań i butów. Autentykacja i autoryzacja użytkowników: JWT. Cachowanie danych z backendu: React-Query. Płatności: Stripe. Użytkownik: wybiera rozmiar i kolor produktu, zarządza koszykiem, składa zamówienia."
+      },
+      "finance": {
+        "title": "FINEances - menedżer finansów",
+        "content": "Aplikacja full-stackowa do zarządzania finansami. Autentykacja użytkownika: dane uwierzytelniające, OAuth. Użytkownik: dodaje, filtruje i grupuje przychody i wydatki, aktualizuje swój profil."
+      }
+    },
+    "button": "Zobacz kod"
+  },
+  "contact": {
+    "heading": "Porozmawiajmy o naszych wspólnych projektach!",
+    "paragraph": "Masz pytanie, propozycję współpracy, albo chcesz po prostu pogadać? Czekam na wiadomość!",
+    "form": {
+      "name": {
+        "label": "Imię",
+        "placeholder": "Wpisz swoje imię",
+        "errorMessage": "Wprowadzone imię jest zbyt krótkie"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Wpisz swój adres e-mail",
+        "errorMessage": "Wprowadzony e-mail jest niepoprawny"
+      },
+      "message": {
+        "label": "Wiadomość",
+        "placeholder": "Wpisz treść wiadomości",
+        "errorMessage": "Wprowadzona wiadomość jest zbyt krótka"
+      }
+    },
+    "button": "Wyślij",
+    "successMessage": "twoja wiadomość została pomyślnie wysłana!",
+    "errorMessage": "Coś poszło nie tak z wysłaniem twojej wiadomości, spróbuj proszę innej formy kontaktu."
+  },
+  "footer": {
+    "paragraph": "Wszelkie prawa zastrzeżone."
+  },
+  "blog": {
+    "heading": "Posty",
+    "backToHomePage": "Wróć na stronę główną",
+    "backToPosts": "Wróć do postów",
+    "published": "Opublikowano"
+  }
+}

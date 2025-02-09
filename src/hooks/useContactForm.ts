@@ -1,11 +1,15 @@
 import { useState } from 'react'
-import { ContactFormData } from '@/types/form'
-import { handleInputEvent } from '@/utils/functions/handleInputEvent'
+import { ContactFormData } from '@/types/ContactFormData'
+import { handleInputEvent } from '@/utils/handleInputEvent'
 import { ChangeEventHandler } from 'react'
+import { useI18n } from '@/locales/client'
 
 type ContactFormInputs = {
   tag: 'input' | 'textarea'
   id: 'name' | 'email' | 'message'
+  value: string
+  label: string
+  errorMessage: string
   isInvalid: boolean
   onChange:
     | (ChangeEventHandler<HTMLInputElement> &
@@ -15,7 +19,6 @@ type ContactFormInputs = {
     | (ChangeEventHandler<HTMLInputElement> &
         ChangeEventHandler<HTMLTextAreaElement>)
     | undefined
-  value: string
 }
 
 const initialContactFormData: ContactFormData = {
@@ -35,6 +38,7 @@ const initialContactFormData: ContactFormData = {
 }
 
 export default function useContactForm() {
+  const t = useI18n()
   const [contactFormData, setContactFormData] = useState<ContactFormData>(
     initialContactFormData
   )
@@ -43,26 +47,32 @@ export default function useContactForm() {
     {
       tag: 'input',
       id: 'name',
+      value: contactFormData.name,
+      label: t('common.contact.form.name.label'),
+      errorMessage: t('common.contact.form.name.errorMessage'),
       isInvalid: contactFormData.isInvalid.name,
       onChange: (e) => handleInputEvent(e, setContactFormData),
-      onBlur: (e) => handleInputEvent(e, setContactFormData),
-      value: contactFormData.name
+      onBlur: (e) => handleInputEvent(e, setContactFormData)
     },
     {
       tag: 'input',
       id: 'email',
+      value: contactFormData.email,
+      label: t('common.contact.form.email.label'),
+      errorMessage: t('common.contact.form.email.errorMessage'),
       isInvalid: contactFormData.isInvalid.email,
       onChange: (e) => handleInputEvent(e, setContactFormData),
-      onBlur: (e) => handleInputEvent(e, setContactFormData),
-      value: contactFormData.email
+      onBlur: (e) => handleInputEvent(e, setContactFormData)
     },
     {
       tag: 'textarea',
       id: 'message',
+      value: contactFormData.message,
+      label: t('common.contact.form.message.label'),
+      errorMessage: t('common.contact.form.message.errorMessage'),
       isInvalid: contactFormData.isInvalid.message,
       onChange: (e) => handleInputEvent(e, setContactFormData),
-      onBlur: (e) => handleInputEvent(e, setContactFormData),
-      value: contactFormData.message
+      onBlur: (e) => handleInputEvent(e, setContactFormData)
     }
   ]
 

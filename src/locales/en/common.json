@@ -1,0 +1,120 @@
+{
+  "navigation": {
+    "about": "About",
+    "offer": "Offer",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "downloadCv": "Show resume",
+  "hero": {
+    "heading": "Hi, I'm Michał. 👋 Frontend Developer.",
+    "first_paragraph": "I create modern, responsive and functional frontend.",
+    "second_paragraph": "I discuss, engage and support.",
+    "button": "Contact me",
+    "availability_first": "Available",
+    "availability_second": "to work"
+  },
+  "about": {
+    "heading_first": "About",
+    "paragraph_first": "I’m a frontend developer with 2 years of commercial experience in this field. During this period I’ve successfully developed scalable and user-friendly applications that helped with achieving the company’s business goals. Even though I specialize in frontend, I have also developed some backend for my personal projects.",
+    "paragraph_second": "After work, I like to spend time at the gym, walk or taste Asian cuisine.",
+    "heading_second": "Technologies"
+  },
+  "offer": {
+    "heading": "Offer",
+    "paragraph": "I work on every project comprehensively and with the diligence I developed during my engineering studies. I adopt a personal approach to every collaboration. See what I can do for you and your business:",
+    "cards": {
+      "websites": {
+        "title": "Websites",
+        "content": "Responsive and based on modern technologies supporting SEO. Adjusted to the standards you set and your needs."
+      },
+      "webApplications": {
+        "title": "Web applications",
+        "content": "Fully functional, meeting business requirements. Technologies adjusted to the project's needs."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "content": "From A to Z: hosting, domain, SSL, deployment, maintenance and service, analytics, A/B tests."
+      },
+      "emailTemplates": {
+        "title": "Email templates",
+        "content": "Responsive transactional and marketing emails. Adjusted to most available mailboxes."
+      }
+    }
+  },
+  "experience": {
+    "heading": "Experience",
+    "ongoing": "ongoing",
+    "duties": {
+      "mmc": {
+        "1": "Creating language learning application using technologies such as React, Typescript.",
+        "2": "Creating responsive and effective websites that generate leads.",
+        "3": "Developing custom validation for sales forms.",
+        "4": "Collaborating with a graphic designer to ensure the best UX and UI.",
+        "5": "Creating email templates in HTML.",
+        "6": "Optimizing websites for performance, SEO and accessibility.",
+        "7": "Integrating websites with analytic tools such as Google Analytics and Hotjar."
+      },
+      "signal": {
+        "1": "Creating admin dashboards, mobile applications and email templates using React, React Native and Typescript.",
+        "2": "Writing unit/integration tests using Vitest and React Testing Library.",
+        "3": "Refactoring legacy code.",
+        "4": "Collaborating with Product Owner and Designer to achieve the best possible result.",
+        "5": "Participating in creating the final version of the product."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Projects",
+    "cards": {
+      "dashboard": {
+        "title": "Admin Dashboard",
+        "content": "Classic admin dashboard with user authentication. User: sees revenues, expenses and users on charts, searches for specific orders."
+      },
+      "ecommerce": {
+        "title": "E-commerce clothing store",
+        "content": "Full-stack web application for buying clothes and shoes. User authentication and autorization: JWT. Caching backend data: React-Query. Payments: Stripe. User: selects size and color, manages basket, places an order."
+      },
+      "finance": {
+        "title": "FINEances - finance manager",
+        "content": "Full-stack web application for managing your finances. User authentication: credentials, OAuth. User: adds, filters and groups earnings and spending, updates user profile."
+      }
+    },
+    "button": "See the code"
+  },
+  "contact": {
+    "heading": "Let's talk about our new project!",
+    "paragraph": "Got a question or proposal, or just want to say hello? Go ahead.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name",
+        "errorMessage": "The name entered is too short"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Enter your e-mail",
+        "errorMessage": "The e-mail entered is invalid"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message",
+        "errorMessage": "The message entered is too short"
+      }
+    },
+    "button": "Submit",
+    "successMessage": "your message was successfully sent!",
+    "errorMessage": "Something went wrong with sending your message, please try another type of contact."
+  },
+  "footer": {
+    "paragraph": "All rights reserved."
+  },
+  "blog": {
+    "heading": "Posts",
+    "backToHomePage": "Back to homepage",
+    "backToPosts": "Back to posts",
+    "published": "Published"
+  }
+}

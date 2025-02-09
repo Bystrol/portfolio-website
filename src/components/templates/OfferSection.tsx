@@ -1,17 +1,14 @@
-import { Translation } from '@/types/translation'
-import { sectionIds } from '@/utils/data/sectionIds'
+'use client'
+
 import { Unbounded } from 'next/font/google'
 import OfferCard from '../molecules/OfferCard'
 import { motion, useTransform, useScroll, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
+import { useI18n } from '@/locales/client'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
-
-type OfferSectionProps = {
-  translation: Translation
-}
 
 const containerVariants = {
   hidden: {
@@ -24,7 +21,8 @@ const containerVariants = {
   }
 }
 
-export default function OfferSection({ translation }: OfferSectionProps) {
+export const OfferSection = () => {
+  const t = useI18n()
   const [isMobileDevice, setIsMobileDevice] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
@@ -33,9 +31,32 @@ export default function OfferSection({ translation }: OfferSectionProps) {
   const isInView = useInView(sectionRef, { amount: 0.2, once: true })
   const x = useTransform(scrollYProgress, [0, 1], ['0%', '-328%'])
 
-  const cardsContent = translation.offer.cards.map((card, index) => {
-    return <OfferCard key={index} title={card.title} content={card.content} />
-  })
+  const cardItems = [
+    {
+      id: 'websites',
+      title: t('common.offer.cards.websites.title'),
+      content: t('common.offer.cards.websites.content')
+    },
+    {
+      id: 'webApplications',
+      title: t('common.offer.cards.webApplications.title'),
+      content: t('common.offer.cards.webApplications.content')
+    },
+    {
+      id: 'maintenance',
+      title: t('common.offer.cards.maintenance.title'),
+      content: t('common.offer.cards.maintenance.content')
+    },
+    {
+      id: 'emailTemplates',
+      title: t('common.offer.cards.emailTemplates.title'),
+      content: t('common.offer.cards.emailTemplates.content')
+    }
+  ]
+
+  const cardsContent = cardItems.map((card) => (
+    <OfferCard key={card.id} title={card.title} content={card.content} />
+  ))
 
   useEffect(() => {
     const isMobile =
@@ -47,7 +68,7 @@ export default function OfferSection({ translation }: OfferSectionProps) {
 
   return (
     <motion.section
-      id={sectionIds[2]}
+      id="offer"
       ref={sectionRef}
       variants={containerVariants}
       initial="hidden"
@@ -59,10 +80,10 @@ export default function OfferSection({ translation }: OfferSectionProps) {
         <h2
           className={`${unbounded.className} text-[16px] lg:text-[18px] uppercase`}
         >
-          {translation.offer.heading}
+          {t('common.offer.heading')}
         </h2>
         <p className="text-[16px] sm:text-[18px] lg:text-[24px] lg:w-1/2">
-          {translation.offer.paragraph}
+          {t('common.offer.paragraph')}
         </p>
         {isMobileDevice ? (
           <motion.div style={{ x }} className="flex gap-[30px] w-[104%]">

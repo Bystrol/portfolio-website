@@ -1,5 +1,4 @@
-export type ContactFormData = {
-  [key: string]: string | Record
+export interface ContactFormData {
   name: string
   email: string
   message: string
@@ -16,8 +15,7 @@ export type ContactFormData = {
   }
 }
 
-export type UpdatedInvalid = {
-  [key: string]: boolean
+export interface UpdatedInvalid {
   name: boolean
   email: boolean
   message: boolean

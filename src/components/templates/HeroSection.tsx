@@ -1,52 +1,44 @@
-import scrollToSection from '@/utils/functions/scrollToSection'
-import CtaButton from '../molecules/CtaButton'
-import ArrowDown from '../atoms/ArrowDown'
+import { CtaButton } from '../molecules/CtaButton'
 import { Unbounded } from 'next/font/google'
-import { Translation } from '@/types/translation'
-import { sectionIds } from '@/utils/data/sectionIds'
 import Link from 'next/link'
 import ArrowTopRight from '../atoms/ArrowTopRight'
+import { getI18n } from '@/locales/server'
 
 const unbounded = Unbounded({
   subsets: ['latin']
 })
 
-type HeroSectionProps = {
-  translation: Translation
-}
+export const HeroSection = async () => {
+  const t = await getI18n()
 
-export default function HeroSection({ translation }: HeroSectionProps) {
   return (
     <section
-      id={sectionIds[0]}
+      id="hero"
       className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.png')] sm:bg-[url('../../public/images/mesh-gradient-tablet.png')] lg:bg-[url('../../public/images/mesh-gradient-desktop.png')] bg-cover bg-no-repeat bg-right-bottom"
     >
       <div className="absolute top-1/2 -translate-y-1/2 flex flex-col items-center gap-[20px] w-4/5 animate-slideUpGreeting">
         <h1
           className={`${unbounded.className} text-center text-[34px] sm:text-[58px] lg:text-[68px] max-w-[310px] sm:max-w-[520px] lg:max-w-[820px] leading-[45px] sm:leading-[75px] lg:leading-[80px]`}
         >
-          {translation.hero.heading}
+          {t('common.hero.heading')}
         </h1>
         <div>
           <p className="text-center text-[12px] sm:text-[14px] lg:text-[16px] max-w-[346px] sm:max-w-[440px] lg:max-w-[580px] text-white/[.70]">
-            {translation.hero.first_paragraph}
+            {t('common.hero.first_paragraph')}
           </p>
           <p className="text-center text-[12px] sm:text-[14px] lg:text-[16px] max-w-[346px] sm:max-w-[440px] lg:max-w-[580px] text-white/[.70]">
-            {translation.hero.second_paragraph}
+            {t('common.hero.second_paragraph')}
           </p>
         </div>
         <div className="flex gap-4 mt-4">
-          <CtaButton
-            text={translation.hero.button}
-            handleClick={() => scrollToSection(5)}
-            icon={ArrowDown}
-          />
+          <CtaButton />
+
           <Link
             href="CV_Michał_Bystryk.pdf"
             target="_blank"
             className="group flex justify-center items-center gap-[10px] rounded-full border border-[#2960F8] bg-[#2960F840] sm:hover:drop-shadow-blue text-[14px] sm:text-[18px] lg:text-[20px] mt-[10px] px-[20px] py-[8px] animate-bounce w-max"
           >
-            {translation.downloadCv}
+            {t('common.downloadCv')}
             <div className="sm:group-hover:translate-y-[1px] transition-all">
               <ArrowTopRight />
             </div>
