@@ -11,6 +11,8 @@ import EnglishIcon from '../../../public/images/english-icon.png'
 import BarsIcon from '../atoms/BarsIcon'
 import CloseIcon from '../atoms/CloseIcon'
 import { Translation } from '@/types/translation'
+import Link from 'next/link'
+import { Language } from '@/hooks/useLanguageSwitch'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -20,12 +22,14 @@ type NavbarProps = {
   translation: Translation
   switchChecked: boolean
   toggleSwitch: () => void
+  language: Language
 }
 
 export default function Navbar({
   translation,
   switchChecked,
-  toggleSwitch
+  toggleSwitch,
+  language
 }: NavbarProps) {
   const [isMobileNavigationVisible, setIsMobileNavigationVisible] =
     useState<boolean>(false)
@@ -91,13 +95,21 @@ export default function Navbar({
             <nav className="hidden sm:block">
               <ul className="flex items-center gap-[20px]">
                 {translation.navigation.map((navItem, index) => {
+                  const isBlogItem = navItem === 'Blog'
+
                   return (
                     <li
                       key={index}
                       className="text-[14px] lg:text-[18px] cursor-pointer hover:drop-shadow-blue hover:-translate-y-[2px] transition-all duration-200"
-                      onClick={() => scrollToSection(index + 1)}
+                      onClick={() =>
+                        isBlogItem ? undefined : scrollToSection(index + 1)
+                      }
                     >
-                      {navItem}
+                      {isBlogItem ? (
+                        <Link href={`/${language}/blog`}>{navItem}</Link>
+                      ) : (
+                        navItem
+                      )}
                     </li>
                   )
                 })}

@@ -1,6 +1,13 @@
 {
   "pl": {
-    "navigation": ["O mnie", "Oferta", "Doświadczenie", "Projekty", "Kontakt"],
+    "navigation": [
+      "O mnie",
+      "Oferta",
+      "Doświadczenie",
+      "Projekty",
+      "Kontakt",
+      "Blog"
+    ],
     "downloadCv": "Zobacz CV",
     "hero": {
       "heading": "Cześć, tu Michał. 👋 Frontend Developer.",
@@ -104,10 +111,23 @@
     },
     "footer": {
       "paragraph": "Wszelkie prawa zastrzeżone."
+    },
+    "blog": {
+      "heading": "Posty",
+      "backToHomePage": "Wróć na stronę główną",
+      "backToPosts": "Wróć do postów",
+      "published": "Opublikowano"
     }
   },
   "en": {
-    "navigation": ["About", "Offer", "Experience", "Projects", "Contact"],
+    "navigation": [
+      "About",
+      "Offer",
+      "Experience",
+      "Projects",
+      "Contact",
+      "Blog"
+    ],
     "downloadCv": "Show resume",
     "hero": {
       "heading": "Hi, I'm Michał. 👋 Frontend Developer.",
@@ -211,6 +231,12 @@
     },
     "footer": {
       "paragraph": "All rights reserved."
+    },
+    "blog": {
+      "heading": "Posts",
+      "backToHomePage": "Back to homepage",
+      "backToPosts": "Back to posts",
+      "published": "Published"
     }
   }
 }

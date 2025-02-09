@@ -15,7 +15,8 @@ import ExperienceSection from '@/components/organisms/ExperienceSection'
 
 export default function Home() {
   const [showContent, setShowContent] = useState<boolean>(false)
-  const { translation, switchChecked, toggleSwitch } = useLanguageSwitch()
+  const { translation, language, switchChecked, toggleSwitch } =
+    useLanguageSwitch()
 
   setTimeout(() => {
     setShowContent(true)
@@ -30,6 +31,7 @@ export default function Home() {
             translation={translation}
             switchChecked={switchChecked}
             toggleSwitch={toggleSwitch}
+            language={language}
           />
           <HeroSection translation={translation} />
           <AboutSection translation={translation} />

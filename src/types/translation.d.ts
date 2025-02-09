@@ -44,4 +44,10 @@ export type Translation = {
   footer: {
     paragraph: string
   }
+  blog: {
+    heading: string
+    backToHomePage: string
+    backToPosts: string
+    published: string
+  }
 }
