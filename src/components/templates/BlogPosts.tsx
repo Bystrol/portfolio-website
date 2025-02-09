@@ -1,4 +1,4 @@
-import { getCurrentLocale, getI18n } from '@/locales/server'
+import { getI18n } from '@/locales/server'
 import { SanityDocument } from 'next-sanity'
 import Link from 'next/link'
 

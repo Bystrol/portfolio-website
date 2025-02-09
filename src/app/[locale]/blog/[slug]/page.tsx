@@ -3,7 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { client } from '@/sanity/client'
 import { BlogPost } from '@/components/organisms/BlogPost'
-import { getCurrentLocale } from '@/locales/server'
+import { setStaticParamsLocale } from 'next-international/server'
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug && language == $locale][0]`
 
@@ -17,10 +17,10 @@ const urlFor = (source: SanityImageSource) =>
 export default async function BlogPostPage({
   params
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }) {
-  const { slug } = await params
-  const locale = await getCurrentLocale()
+  const { locale, slug } = await params
+  setStaticParamsLocale(locale)
 
   const post = await client.fetch<SanityDocument>(POST_QUERY, { slug, locale })
 

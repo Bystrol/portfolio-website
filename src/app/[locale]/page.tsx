@@ -8,8 +8,16 @@ import { PreloadingAnimation } from '@/components/atoms/PreloadingAnimation'
 import { SocialMedia } from '@/components/molecules/SocialMedia'
 import { ExperienceSection } from '@/components/templates/ExperienceSection'
 import { Navbar } from '@/components/organisms/Navbar'
+import { setStaticParamsLocale } from 'next-international/server'
 
-export default function HomePage() {
+export default async function HomePage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setStaticParamsLocale(locale)
+
   return (
     <>
       <PreloadingAnimation />

@@ -1,5 +1,10 @@
 import { ReactNode } from 'react'
 import { I18nProviderClient } from '../../locales/client'
+import { getStaticParams } from '@/locales/server'
+
+export function generateStaticParams() {
+  return getStaticParams()
+}
 
 export default async function SubLayout({
   params,
