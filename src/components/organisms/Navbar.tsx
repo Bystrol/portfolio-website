@@ -9,7 +9,6 @@ import PolishIcon from '../../../public/images/polish-icon.png'
 import EnglishIcon from '../../../public/images/english-icon.png'
 import BarsIcon from '../atoms/BarsIcon'
 import CloseIcon from '../atoms/CloseIcon'
-import Link from 'next/link'
 import { useChangeLocale, useCurrentLocale, useI18n } from '@/locales/client'
 import { scrollToSection } from '@/utils/scrollToSection'
 import { SectionId } from '@/types/SectionId'
@@ -27,11 +26,11 @@ export const Navbar = () => {
   const [isMobileNavigationVisible, setIsMobileNavigationVisible] =
     useState<boolean>(false)
 
-  let lastScrollY = window.scrollY
-  let totalScrolled = 0
-  let scrollingDown = false
-
   const handleScroll = useCallback(() => {
+    let lastScrollY = window.scrollY
+    let totalScrolled = 0
+    let scrollingDown = false
+
     const navbarElement = document.getElementById('navbar')
 
     if (!isMobileNavigationVisible) {
