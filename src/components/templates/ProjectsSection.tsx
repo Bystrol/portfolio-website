@@ -1,16 +1,16 @@
 'use client'
 
+import { useI18n } from '@/locales/client'
+import { motion, useInView } from 'framer-motion'
 import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRef } from 'react'
+import AdminDashboardImage from '../../../public/images/admin-dashboard.png'
 import FirstProjectImage from '../../../public/images/project-image-1.png'
 import SecondProjectImage from '../../../public/images/project-image-2.png'
-import AdminDashboardImage from '../../../public/images/admin-dashboard.png'
-import TechnologyBox from '../atoms/TechnologyBox'
-import Link from 'next/link'
 import ArrowTopRight from '../atoms/ArrowTopRight'
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { useI18n } from '@/locales/client'
+import TechnologyBox from '../atoms/TechnologyBox'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -130,7 +130,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={`Preview image of the ${project.id} project`}
-                    quality={100}
+                    quality={80}
                     className="rounded-lg sm:rounded-xl sm:group-hover:scale-105 transition-all duration-500"
                     width={1920}
                     height={958}

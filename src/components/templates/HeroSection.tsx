@@ -1,8 +1,8 @@
-import { CtaButton } from '../molecules/CtaButton'
+import { getI18n } from '@/locales/server'
 import { Unbounded } from 'next/font/google'
 import Link from 'next/link'
 import ArrowTopRight from '../atoms/ArrowTopRight'
-import { getI18n } from '@/locales/server'
+import { CtaButton } from '../molecules/CtaButton'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -14,7 +14,7 @@ export const HeroSection = async () => {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.png')] sm:bg-[url('../../public/images/mesh-gradient-tablet.png')] lg:bg-[url('../../public/images/mesh-gradient-desktop.png')] bg-cover bg-no-repeat bg-right-bottom"
+      className="flex flex-col items-center gap-[160px] w-full h-svh bg-[url('../../public/images/mesh-gradient-mobile.webp')] sm:bg-[url('../../public/images/mesh-gradient-tablet.webp')] lg:bg-[url('../../public/images/mesh-gradient-desktop.webp')] bg-cover bg-no-repeat bg-right-bottom"
     >
       <div className="absolute top-1/2 -translate-y-1/2 flex flex-col items-center gap-[20px] w-4/5 animate-slideUpGreeting">
         <h1

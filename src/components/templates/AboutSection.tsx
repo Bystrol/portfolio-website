@@ -131,7 +131,7 @@ export const AboutSection = () => {
             alt="Picture with my portrait"
             width={772}
             height={976}
-            priority
+            quality={80}
           />
         </motion.div>
       </motion.div>
