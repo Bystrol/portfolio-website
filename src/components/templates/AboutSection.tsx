@@ -1,12 +1,12 @@
 'use client'
 
-import { Unbounded } from 'next/font/google'
-import TechnologyBox from '../atoms/TechnologyBox'
-import Image from 'next/image'
-import PortraitImg from '../../../public/images/portrait.png'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { useI18n } from '@/locales/client'
+import { motion, useInView } from 'framer-motion'
+import { Unbounded } from 'next/font/google'
+import Image from 'next/image'
+import { useRef } from 'react'
+import PortraitImg from '../../../public/images/portrait.png'
+import TechnologyBox from '../atoms/TechnologyBox'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -129,9 +129,9 @@ export const AboutSection = () => {
           <Image
             src={PortraitImg}
             alt="Picture with my portrait"
-            quality={100}
             width={772}
             height={976}
+            priority
           />
         </motion.div>
       </motion.div>
