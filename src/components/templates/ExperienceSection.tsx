@@ -1,11 +1,11 @@
 'use client'
 
-import { Unbounded } from 'next/font/google'
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { ExperienceCard } from '../molecules/ExperienceCard'
-import Link from 'next/link'
 import { useI18n } from '@/locales/client'
+import { motion, useInView } from 'framer-motion'
+import { Unbounded } from 'next/font/google'
+import Link from 'next/link'
+import { useRef } from 'react'
+import { ExperienceCard } from '../molecules/ExperienceCard'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -34,6 +34,7 @@ export const ExperienceSection = () => {
       company: 'SignalOS',
       companyWebsite: 'https://www.signalos.io/',
       startDate: '03.2024',
+      endDate: '03.2025',
       translationKey: 'signal',
       technologies: [
         'React',
