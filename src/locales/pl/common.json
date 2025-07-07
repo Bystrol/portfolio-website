@@ -63,6 +63,10 @@
         "3": "Refaktoryzacja starszego kodu.",
         "4": "Stała współpraca z Product Ownerem i Designerem w celu osiągnięcia najlepszego możliwego rezultatu.",
         "5": "Udział w kreowaniu finalnej wersji produktu."
+      },
+      "blazity": {
+        "1": "Tworzenie od podstaw systemu no-code do tworzenia wiadomości w technologii RCS",
+        "2": "Rozwój wewnętrznego narzędzia do estymacji projektów"
       }
     }
   },

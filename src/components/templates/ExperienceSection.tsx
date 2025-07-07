@@ -4,7 +4,7 @@ import { useI18n } from '@/locales/client'
 import { motion, useInView } from 'framer-motion'
 import { Unbounded } from 'next/font/google'
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import { ExperienceCard } from '../molecules/ExperienceCard'
 
 const unbounded = Unbounded({
@@ -27,58 +27,74 @@ export const ExperienceSection = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { amount: 0.1, once: true })
 
-  const experienceList = [
-    {
-      id: 'signal',
-      position: 'Frontend Developer',
-      company: 'SignalOS',
-      companyWebsite: 'https://www.signalos.io/',
-      startDate: '03.2024',
-      endDate: '03.2025',
-      translationKey: 'signal',
-      technologies: [
-        'React',
-        'React Native',
-        'Next',
-        'Typescript',
-        'Zustand',
-        'Material UI',
-        'Tanstack Query',
-        'Vitest'
-      ],
-      duties: [
-        t('common.experience.duties.signal.1'),
-        t('common.experience.duties.signal.2'),
-        t('common.experience.duties.signal.3'),
-        t('common.experience.duties.signal.4'),
-        t('common.experience.duties.signal.5')
-      ]
-    },
-    {
-      id: 'mmc',
-      position: 'Frontend Developer',
-      company: 'Mobile Marketing Center',
-      startDate: '01.2023',
-      endDate: '12.2023',
-      translationKey: 'mmc',
-      technologies: [
-        'React',
-        'Typescript',
-        'Redux',
-        'Styled Components',
-        'SCSS'
-      ],
-      duties: [
-        t('common.experience.duties.mmc.1'),
-        t('common.experience.duties.mmc.2'),
-        t('common.experience.duties.mmc.3'),
-        t('common.experience.duties.mmc.4'),
-        t('common.experience.duties.mmc.5'),
-        t('common.experience.duties.mmc.6'),
-        t('common.experience.duties.mmc.7')
-      ]
-    }
-  ]
+  const experienceList = useMemo(
+    () => [
+      {
+        id: 'blazity',
+        position: 'Frontend Developer',
+        company: 'Blazity',
+        companyWebsite: 'https://blazity.com/',
+        startDate: '03.2025',
+        translationKey: 'blazity',
+        technologies: ['Next.js', 'React', 'Typescript', 'Tailwind'],
+        duties: [
+          t('common.experience.duties.blazity.1'),
+          t('common.experience.duties.blazity.2')
+        ]
+      },
+      {
+        id: 'signal',
+        position: 'Frontend Developer',
+        company: 'SignalOS',
+        companyWebsite: 'https://www.signalos.io/',
+        startDate: '03.2024',
+        endDate: '03.2025',
+        translationKey: 'signal',
+        technologies: [
+          'React',
+          'React Native',
+          'Next',
+          'Typescript',
+          'Zustand',
+          'Material UI',
+          'Tanstack Query',
+          'Vitest'
+        ],
+        duties: [
+          t('common.experience.duties.signal.1'),
+          t('common.experience.duties.signal.2'),
+          t('common.experience.duties.signal.3'),
+          t('common.experience.duties.signal.4'),
+          t('common.experience.duties.signal.5')
+        ]
+      },
+      {
+        id: 'mmc',
+        position: 'Frontend Developer',
+        company: 'Mobile Marketing Center',
+        startDate: '01.2023',
+        endDate: '12.2023',
+        translationKey: 'mmc',
+        technologies: [
+          'React',
+          'Typescript',
+          'Redux',
+          'Styled Components',
+          'SCSS'
+        ],
+        duties: [
+          t('common.experience.duties.mmc.1'),
+          t('common.experience.duties.mmc.2'),
+          t('common.experience.duties.mmc.3'),
+          t('common.experience.duties.mmc.4'),
+          t('common.experience.duties.mmc.5'),
+          t('common.experience.duties.mmc.6'),
+          t('common.experience.duties.mmc.7')
+        ]
+      }
+    ],
+    []
+  )
 
   return (
     <motion.section

@@ -63,6 +63,10 @@
         "3": "Refactoring legacy code.",
         "4": "Collaborating with Product Owner and Designer to achieve the best possible result.",
         "5": "Participating in creating the final version of the product."
+      },
+      "blazity": {
+        "1": "Creating from scratch a no-code system for creating messages in RCS technology",
+        "2": "Developing an internal project estimation tool"
       }
     }
   },
