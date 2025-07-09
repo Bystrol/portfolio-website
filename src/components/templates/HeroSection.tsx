@@ -1,7 +1,6 @@
 import { getI18n } from '@/locales/server'
 import { Unbounded } from 'next/font/google'
-import Link from 'next/link'
-import ArrowTopRight from '../atoms/ArrowTopRight'
+import { DownloadResumeLink } from '../atoms/DownloadResumeLink'
 import { CtaButton } from '../molecules/CtaButton'
 
 const unbounded = Unbounded({
@@ -33,16 +32,7 @@ export const HeroSection = async () => {
         <div className="flex gap-4 mt-4">
           <CtaButton />
 
-          <Link
-            href="CV_Michał_Bystryk.pdf"
-            target="_blank"
-            className="group flex justify-center items-center gap-[10px] rounded-full border border-[#2960F8] bg-[#2960F840] sm:hover:drop-shadow-blue text-[14px] sm:text-[18px] lg:text-[20px] mt-[10px] px-[20px] py-[8px] animate-bounce w-max"
-          >
-            {t('common.downloadCv')}
-            <div className="sm:group-hover:translate-y-[1px] transition-all">
-              <ArrowTopRight />
-            </div>
-          </Link>
+          <DownloadResumeLink />
         </div>
       </div>
       <div className="absolute bottom-[30px] flex justify-center w-full px-[30px] sm:px-[60px] lg:px-[120px] animate-slideUp">
