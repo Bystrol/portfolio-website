@@ -1,5 +1,6 @@
 import { getI18n } from '@/locales/server'
 import { PortableText, SanityDocument } from 'next-sanity'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props {
@@ -16,7 +17,7 @@ export const BlogPost = async ({ postImageUrl, post }: Props) => {
         ← {t('common.blog.backToPosts')}
       </Link>
       {postImageUrl && (
-        <img
+        <Image
           src={postImageUrl}
           alt={post.title}
           className="aspect-video rounded-xl"

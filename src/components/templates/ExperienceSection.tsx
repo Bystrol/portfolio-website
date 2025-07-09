@@ -93,7 +93,7 @@ export const ExperienceSection = () => {
         ]
       }
     ],
-    []
+    [t]
   )
 
   return (

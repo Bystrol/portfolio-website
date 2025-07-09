@@ -1,13 +1,12 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import '../globals.css'
-import { Toaster } from 'react-hot-toast'
-import type { Viewport } from 'next'
+import { I18nProviderClient } from '@/locales/client'
+import { getStaticParams } from '@/locales/server'
+import ClarityTag from '@/scripts/ClarityTag'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import ClarityTag from '@/scripts/ClarityTag'
-import { getStaticParams } from '@/locales/server'
-import { I18nProviderClient } from '@/locales/client'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
+import '../globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,13 +23,6 @@ export const metadata: Metadata = {
   other: {
     'google-site-verification': 'FCpCptrurAkfrhyDUvNjSoHOkjh7H7uEKyHkV03JyZc'
   }
-}
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false
 }
 
 export function generateStaticParams() {

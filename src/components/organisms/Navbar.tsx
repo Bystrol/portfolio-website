@@ -1,17 +1,15 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
-import Switch from 'react-switch'
+import { useChangeLocale, useCurrentLocale, useI18n } from '@/locales/client'
+import { SectionId } from '@/types/SectionId'
+import { scrollToSection } from '@/utils/scrollToSection'
 import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
-import CircularButton from '../molecules/CircularButton'
-import PolishIcon from '../../../public/images/polish-icon.png'
-import EnglishIcon from '../../../public/images/english-icon.png'
+import { useEffect, useState } from 'react'
+import Switch from 'react-switch'
 import BarsIcon from '../atoms/BarsIcon'
 import CloseIcon from '../atoms/CloseIcon'
-import { useChangeLocale, useCurrentLocale, useI18n } from '@/locales/client'
-import { scrollToSection } from '@/utils/scrollToSection'
-import { SectionId } from '@/types/SectionId'
+import CircularButton from '../molecules/CircularButton'
 
 const unbounded = Unbounded({
   subsets: ['latin']
@@ -26,42 +24,42 @@ export const Navbar = () => {
   const [isMobileNavigationVisible, setIsMobileNavigationVisible] =
     useState<boolean>(false)
 
-  let lastScrollY = window.scrollY
-  let totalScrolled = 0
-  let scrollingDown = false
+  useEffect(() => {
+    let lastScrollY = window.scrollY
+    let totalScrolled = 0
+    let scrollingDown = false
 
-  const handleScroll = useCallback(() => {
-    const navbarElement = document.getElementById('navbar')
+    const handleScroll = () => {
+      const navbarElement = document.getElementById('navbar')
 
-    if (!isMobileNavigationVisible) {
-      const currentScrollingDown = window.scrollY > lastScrollY
-      if (currentScrollingDown !== scrollingDown) {
-        totalScrolled = 0
-      } else {
-        totalScrolled += Math.abs(window.scrollY - lastScrollY)
-      }
-
-      if (totalScrolled > 100) {
-        if (currentScrollingDown && window.scrollY > 100) {
-          navbarElement?.classList.add('-translate-y-full')
+      if (!isMobileNavigationVisible) {
+        const currentScrollingDown = window.scrollY > lastScrollY
+        if (currentScrollingDown !== scrollingDown) {
+          totalScrolled = 0
         } else {
-          navbarElement?.classList.remove('-translate-y-full')
+          totalScrolled += Math.abs(window.scrollY - lastScrollY)
         }
+
+        if (totalScrolled > 100) {
+          if (currentScrollingDown && window.scrollY > 100) {
+            navbarElement?.classList.add('-translate-y-full')
+          } else {
+            navbarElement?.classList.remove('-translate-y-full')
+          }
+        }
+
+        scrollingDown = currentScrollingDown
       }
 
-      scrollingDown = currentScrollingDown
+      lastScrollY = window.scrollY
     }
 
-    lastScrollY = window.scrollY
-  }, [isMobileNavigationVisible])
-
-  useEffect(() => {
     window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [handleScroll])
+  }, [isMobileNavigationVisible])
 
   const toggleNavigation = () => {
     setIsMobileNavigationVisible((prevIsVisible) => !prevIsVisible)
@@ -135,6 +133,8 @@ export const Navbar = () => {
             </nav>
             <div className="h-[30px] border-2 border-light-blue/[.50] rounded-full sm:hover:drop-shadow-blue transition-all duration-200">
               <Switch
+                name="language-switch"
+                aria-label="Language switch"
                 checked={switchChecked}
                 onChange={toggleLanguage}
                 offColor="#1B1B1B"
@@ -148,22 +148,22 @@ export const Navbar = () => {
                 uncheckedIcon={
                   <div className="w-full h-full flex justify-end items-center pr-1">
                     <Image
-                      src={EnglishIcon}
+                      src="/images/english-icon.webp"
                       alt="English flag"
-                      quality={100}
                       width={20}
                       height={20}
+                      priority
                     />
                   </div>
                 }
                 checkedIcon={
                   <div className="w-full h-full flex justify-start items-center pl-1">
                     <Image
-                      src={PolishIcon}
+                      src="/images/polish-icon.webp"
                       alt="Polish flag"
-                      quality={100}
                       width={20}
                       height={20}
+                      priority
                     />
                   </div>
                 }

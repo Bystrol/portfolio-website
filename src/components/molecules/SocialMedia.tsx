@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import GithubLogo from '@/components/atoms/GithubLogo'
 import LinkedinLogo from '@/components/atoms/LinkedinLogo'
 import { githubLink, linkedinLink } from '@/constants/socialMediaLinks'
+import Link from 'next/link'
 
 const socialMediaData = [
   {
@@ -19,6 +19,7 @@ export const SocialMedia = () => {
     <div className="fixed bottom-[30px] right-[10px] sm:right-[30px] lg:right-[60px] flex flex-col gap-[10px] animate-slideLeftMobile lg:animate-slideLeftDesktop">
       {socialMediaData.map((social, index) => (
         <Link
+          aria-label={`Link to ${social.link}`}
           href={social.link}
           key={index}
           target="_blank"
