@@ -20,12 +20,16 @@ export default async function HomePage({
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <OfferSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
+
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <OfferSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+
       <Footer />
       <SocialMedia />
     </>

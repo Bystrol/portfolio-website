@@ -102,7 +102,7 @@ export const Navbar = () => {
     <>
       <header
         id="navbar"
-        className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10 animate-slideDown transition-all duration-700"
+        className="fixed flex justify-center w-full h-[60px] lg:h-max px-[30px] py-[15px] sm:px-[60px] lg:py-[20px] lg:px-[120px] xl:py-[25px] bg-light-black/[.03] backdrop-blur z-10"
       >
         <div className="flex justify-between items-center w-full max-w-[1440px] gap-[20px]">
           <h1
