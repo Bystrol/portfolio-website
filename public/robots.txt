@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api
+
+# Host
+Host: https://www.michalbystryk.dev
+
+# Sitemaps
+Sitemap: https://www.michalbystryk.dev/sitemap.xml
