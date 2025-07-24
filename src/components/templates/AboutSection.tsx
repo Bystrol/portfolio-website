@@ -126,13 +126,7 @@ export const AboutSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="w-[250px] sm:w-[287px] lg:w-[386px]"
         >
-          <Image
-            src={PortraitImg}
-            alt="Picture with my portrait"
-            width={772}
-            height={976}
-            quality={80}
-          />
+          <Image src={PortraitImg} alt="Picture with my portrait" />
         </motion.div>
       </motion.div>
     </section>

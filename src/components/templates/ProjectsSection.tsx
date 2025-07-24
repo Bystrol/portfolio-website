@@ -130,10 +130,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={`Preview image of the ${project.id} project`}
-                    quality={80}
                     className="rounded-lg sm:rounded-xl sm:group-hover:scale-105 transition-all duration-500"
-                    width={1920}
-                    height={958}
                   />
                 </Link>
                 <div className="flex flex-col gap-[10px] sm:gap-[20px] sm:w-1/2">
