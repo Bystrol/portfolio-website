@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Michał Bystryk, a proficient front-end developer with expertise in modern web technologies like React, TypeScript, and Node.js.',
   keywords: ['Michał Bystryk', 'Front-end developer', 'Web development'],
   openGraph: {
-    images: '/opengraph-image.png'
+    images: '/opengraph-image.webp'
   },
   creator: 'Michał Bystryk',
   other: {

@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import { Unbounded } from 'next/font/google'
 import Image from 'next/image'
 import { useRef } from 'react'
-import PortraitImg from '../../../public/images/portrait.png'
+import PortraitImg from '../../../public/images/portrait.webp'
 import TechnologyBox from '../atoms/TechnologyBox'
 
 const unbounded = Unbounded({
