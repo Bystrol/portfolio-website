@@ -124,9 +124,14 @@ export const AboutSection = () => {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           transition={{ duration: 1, delay: 0.3 }}
-          className="w-[250px] sm:w-[287px] lg:w-[386px]"
+          className="w-[250px] sm:w-[287px] lg:w-[386px] relative min-h-[35vh] lg:min-h-0"
         >
-          <Image src={PortraitImg} alt="Picture with my portrait" />
+          <Image
+            src={PortraitImg}
+            alt="Picture with my portrait"
+            fill
+            sizes="(max-width: 640px) 250px, (max-width: 1024px) 287px, 386px"
+          />
         </motion.div>
       </motion.div>
     </section>
