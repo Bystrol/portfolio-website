@@ -67,6 +67,10 @@
       "blazity": {
         "1": "Tworzenie od podstaw systemu no-code do tworzenia wiadomości w technologii RCS",
         "2": "Rozwój wewnętrznego narzędzia do estymacji projektów"
+      },
+      "pirxey": {
+        "1": "Budowanie chatbota AI.",
+        "2": "Rozwój panelu administracyjnego do zarządzania użytkownikami."
       }
     }
   },

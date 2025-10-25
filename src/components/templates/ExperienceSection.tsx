@@ -30,11 +30,25 @@ export const ExperienceSection = () => {
   const experienceList = useMemo(
     () => [
       {
+        id: 'pirxey',
+        position: 'Frontend Developer',
+        company: 'Widelab/Pirxey',
+        companyWebsite: 'https://www.pirxey.com/',
+        startDate: '09.2025',
+        translationKey: 'pirxey',
+        technologies: ['React', 'Typescript', 'Tailwind', 'AI'],
+        duties: [
+          t('common.experience.duties.pirxey.1'),
+          t('common.experience.duties.pirxey.2')
+        ]
+      },
+      {
         id: 'blazity',
         position: 'Frontend Developer',
         company: 'Blazity',
         companyWebsite: 'https://blazity.com/',
         startDate: '03.2025',
+        endDate: '09.2025',
         translationKey: 'blazity',
         technologies: ['Next.js', 'React', 'Typescript', 'Tailwind'],
         duties: [
