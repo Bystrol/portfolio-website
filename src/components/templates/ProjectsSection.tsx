@@ -9,6 +9,7 @@ import { useRef } from 'react'
 import AdminDashboardImage from '../../../public/images/admin-dashboard.webp'
 import FirstProjectImage from '../../../public/images/project-image-1.webp'
 import SecondProjectImage from '../../../public/images/project-image-2.webp'
+import WasteTrackDashboardImage from '../../../public/images/waste-track-dashboard.webp'
 import ArrowTopRight from '../atoms/ArrowTopRight'
 import TechnologyBox from '../atoms/TechnologyBox'
 
@@ -42,6 +43,24 @@ export const ProjectsSection = () => {
   const isInView = useInView(sectionRef, { amount: 0.1, once: true })
 
   const projectsDetails = [
+    {
+      id: 'waste-track-dashboard',
+      image: WasteTrackDashboardImage,
+      title: t('common.projects.cards.waste-track-dashboard.title'),
+      content: t('common.projects.cards.waste-track-dashboard.content'),
+      technologies: [
+        'astro',
+        'react',
+        'typescript',
+        'vitest',
+        'playwright',
+        'cloudflare',
+        'ai',
+        'spec-driven-development'
+      ],
+      previewLink: 'https://10xdevs-project-alw.pages.dev/',
+      githubLink: 'https://github.com/Bystrol/10xdevs-project'
+    },
     {
       id: 'dashboard',
       image: AdminDashboardImage,

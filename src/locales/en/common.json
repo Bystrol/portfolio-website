@@ -77,6 +77,10 @@
   "projects": {
     "heading": "Projects",
     "cards": {
+      "waste-track-dashboard": {
+        "title": "Waste Track Dashboard",
+        "content": "Dashboard for tracking waste management and generating AI-powered reports. Built entirely using AI spec-driven development."
+      },
       "dashboard": {
         "title": "Admin Dashboard",
         "content": "Classic admin dashboard with user authentication. User: sees revenues, expenses and users on charts, searches for specific orders."

@@ -77,6 +77,10 @@
   "projects": {
     "heading": "Projekty",
     "cards": {
+      "waste-track-dashboard": {
+        "title": "Dashboard śledzenia odpadów",
+        "content": "Dashboard do śledzenia odpadów i generowania raportów wspieranych przez AI. Zbudowany całkowicie w podejściu spec-driven development z AI."
+      },
       "dashboard": {
         "title": "Panel administracyjny",
         "content": "Klasyczny panel administracyjny z autentykacją użytkownika. Użytkownik: widzi przychody, wydatki i użytkowników na wykresach, wyszukuje konkretne zamówienia."
