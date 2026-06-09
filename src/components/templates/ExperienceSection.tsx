@@ -113,7 +113,7 @@ export const ExperienceSection = () => {
       {
         id: 'freelance',
         position: 'Frontend Engineer',
-        company: 'Self-employed',
+        company: 'www.michalbystryk.dev',
         startDate: '04.2021',
         endDate: '03.2023',
         translationKey: 'freelance',
