@@ -9,7 +9,7 @@
   },
   "downloadCv": "Zobacz CV",
   "hero": {
-    "heading": "Cześć, tu Michał. 👋 Frontend Developer.",
+    "heading": "Cześć, tu Michał. 👋 Inżynier Frontend.",
     "first_paragraph": "Robię nowoczesny, responsywny i funkcjonalny frontend.",
     "second_paragraph": "Dyskutuję, angażuję się i wspieram.",
     "button": "Napisz do mnie",
@@ -18,7 +18,7 @@
   },
   "about": {
     "heading_first": "O mnie",
-    "paragraph_first": "Jestem doświadczonym frontend developerem, który tworzy skalowalne i przyjazne dla użytkownika aplikacje, które pomagają osiągnąć cele biznesowe firm. Uważam się za osobę komunikatywną i zorientowaną na biznes, która nie tylko koduje, ale także dostarcza wartość biznesową i aktywnie angażuje się w dyskusje. Na co dzień korzystam z narzędzi AI, aby zwiększyć swoją wydajność. Jeśli szukasz kogoś, kto nie tylko jest programistą, ale także partnerem w Twoim biznesie, jestem odpowiednią osobą dla Ciebie.",
+    "paragraph_first": "Jestem doświadczonym inżynierem frontend, który tworzy skalowalne i przyjazne dla użytkownika aplikacje, które pomagają osiągnąć cele biznesowe firm. Uważam się za osobę komunikatywną i zorientowaną na biznes, która nie tylko koduje, ale także dostarcza wartość biznesową i aktywnie angażuje się w dyskusje. Na co dzień korzystam z narzędzi AI, aby zwiększyć swoją wydajność. Jeśli szukasz kogoś, kto nie tylko jest programistą, ale także partnerem w Twoim biznesie, jestem odpowiednią osobą dla Ciebie.",
     "paragraph_second": "Po pracy lubię spędzać czas na siłowni, spacerować lub degustować kuchnię azjatycką.",
     "heading_second": "Technologie"
   },
@@ -49,28 +49,31 @@
     "ongoing": "obecnie",
     "duties": {
       "mmc": {
-        "1": "Tworzenie aplikacji do nauki języków obcych w technologiach takich jak React, Typescript.",
-        "2": "Tworzenie responsywnych i skutecznych stron internetowych generujących leady.",
-        "3": "Opracowywanie niestandardowej walidacji formularzy sprzedażowych.",
-        "4": "Współpraca z projektantem graficznym w celu zapewnienia najlepszego UX i UI.",
-        "5": "Tworzenie szablonów e-mail w HTML.",
-        "6": "Optymalizowanie witryn pod kątem wydajności, SEO i dostępności.",
-        "7": "Integrowanie stron internetowych z narzędziami analitycznymi, takimi jak Google Analytics i Hotjar."
+        "1": "Stworzyłem interaktywną aplikację webową do nauki języków obcych.",
+        "2": "Optymalizowałem strony pod kątem Core Web Vitals.",
+        "3": "Integrowałem strony z narzędziami analitycznymi, takimi jak Google Tag Manager, Google Analytics, Hotjar."
       },
       "signal": {
-        "1": "Tworzenie paneli administratora, aplikacji mobilnych i szablonów e-mail za pomocą React, React Native i Typescript.",
-        "2": "Pisanie testów jednostkowych/integracyjnych przy użyciu Vitest i React Testing Library.",
-        "3": "Refaktoryzacja starszego kodu.",
-        "4": "Stała współpraca z Product Ownerem i Designerem w celu osiągnięcia najlepszego możliwego rezultatu.",
-        "5": "Udział w kreowaniu finalnej wersji produktu."
+        "1": "Rozwijałem wielodzierżawcze platformy administracyjne.",
+        "2": "Zbudowałem wieloplatformową aplikację mobilną do rezerwacji miejsc parkingowych.",
+        "3": "Przeprowadzałem testy terenowe infrastruktury ładowania pojazdów elektrycznych, weryfikując krytyczne scenariusze ładowania i zapewniając gotowość produkcyjną."
       },
       "blazity": {
-        "1": "Tworzenie od podstaw systemu no-code do tworzenia wiadomości w technologii RCS",
-        "2": "Rozwój wewnętrznego narzędzia do estymacji projektów"
+        "1": "Zbudowałem system no-code do tworzenia wiadomości RCS.",
+        "2": "Stworzyłem wewnętrzne narzędzie do estymacji projektów."
       },
       "pirxey": {
-        "1": "Budowanie chatbota AI.",
-        "2": "Rozwój panelu administracyjnego do zarządzania użytkownikami."
+        "1": "Rozwijam i utrzymuję wielkoskalową platformę chatbota opartą na generatywnym AI, obsługującą ponad 6 milionów aktywnych użytkowników.",
+        "2": "Obdarzony zaufaniem przez kierownictwo do realizacji inicjatyw krytycznych dla biznesu i dostarczania rozwiązań o wysokim wpływie, zgodnych z celami firmy.",
+        "3": "Odpowiadam za dostarczanie end-to-end: od analizy wymagań i projektowania technicznego, przez zarządzanie wdrożeniem, po wsparcie po wydaniu.",
+        "4": "Działam jako strategiczny partner dla liderów technicznych i biznesowych, pomagając kształtować priorytety, kwestionować założenia i podejmować świadome decyzje.",
+        "5": "Stosuję silne podejście produktowe: identyfikuję luki w wymaganiach, wcześnie wykrywam ryzyka i dbam o to, by rozwiązania odpowiadały na realne potrzeby klientów.",
+        "6": "Wielokrotnie pełniłem rolę zastępcy lidera frontend, koordynując priorytety i zapewniając ciągłość dostarczania.",
+        "7": "Samodzielnie dostarczyłem wewnętrzną platformę administracyjną w ciągu dwóch tygodni, szybko wdrażając się bez wcześniejszej znajomości domeny."
+      },
+      "freelance": {
+        "1": "Dostarczałem dedykowane rozwiązania webowe dla małych firm, przekształcając wymagania biznesowe w skalowalne i przyjazne dla użytkownika produkty cyfrowe.",
+        "2": "Zaprojektowałem i stworzyłem stronę internetową dla klienta – salonu fryzjerskiego, wraz z integracją platformy płatniczej Przelewy24."
       }
     }
   },

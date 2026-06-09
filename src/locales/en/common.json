@@ -9,7 +9,7 @@
   },
   "downloadCv": "Show resume",
   "hero": {
-    "heading": "Hi, I'm Michał. 👋 Frontend Developer.",
+    "heading": "Hi, I'm Michał. 👋 Frontend Engineer.",
     "first_paragraph": "I create modern, responsive and functional frontend.",
     "second_paragraph": "I discuss, engage and support.",
     "button": "Contact me",
@@ -18,7 +18,7 @@
   },
   "about": {
     "heading_first": "About",
-    "paragraph_first": "I’m an experienced frontend developer who develops scalable and user-friendly applications that help achieve companies' business goals. I consider myself a communicative and business-oriented person who not only codes but also provides business value and actively engages in discussions. I use AI tools on a daily basis to increase my productivity. If you're looking for someone who is not only a developer but also a partner in your business, I'm the right person for you.",
+    "paragraph_first": "I’m an experienced frontend engineer who develops scalable and user-friendly applications that help achieve companies' business goals. I consider myself a communicative and business-oriented person who not only codes but also provides business value and actively engages in discussions. I use AI tools on a daily basis to increase my productivity. If you're looking for someone who is not only an engineer but also a partner in your business, I'm the right person for you.",
     "paragraph_second": "After work, I like to spend time at the gym, walk or taste Asian cuisine.",
     "heading_second": "Technologies"
   },
@@ -49,28 +49,31 @@
     "ongoing": "ongoing",
     "duties": {
       "mmc": {
-        "1": "Creating language learning application using technologies such as React, Typescript.",
-        "2": "Creating responsive and effective websites that generate leads.",
-        "3": "Developing custom validation for sales forms.",
-        "4": "Collaborating with a graphic designer to ensure the best UX and UI.",
-        "5": "Creating email templates in HTML.",
-        "6": "Optimizing websites for performance, SEO and accessibility.",
-        "7": "Integrating websites with analytic tools such as Google Analytics and Hotjar."
+        "1": "Developed an interactive web app for learning foreign languages.",
+        "2": "Optimized sites for Core Web Vitals.",
+        "3": "Integrated websites with analytic tools, such as Google Tag Manager, Google Analytics, Hotjar."
       },
       "signal": {
-        "1": "Creating admin dashboards, mobile applications and email templates using React, React Native and Typescript.",
-        "2": "Writing unit/integration tests using Vitest and React Testing Library.",
-        "3": "Refactoring legacy code.",
-        "4": "Collaborating with Product Owner and Designer to achieve the best possible result.",
-        "5": "Participating in creating the final version of the product."
+        "1": "Developed multi-tenant administration platforms.",
+        "2": "Built a cross-platform mobile application for parking space reservations.",
+        "3": "Executed field testing of EV charging infrastructure, validating critical charging scenarios and ensuring production readiness."
       },
       "blazity": {
-        "1": "Creating from scratch a no-code system for creating messages in RCS technology.",
-        "2": "Developing an internal project estimation tool."
+        "1": "Built a no-code system for building RCS messages.",
+        "2": "Developed an internal project estimation tool."
       },
       "pirxey": {
-        "1": "Building AI powered chatbot.",
-        "2": "Developing admin panel for managing paid users."
+        "1": "Develop and maintain a large-scale generative AI chatbot platform serving over 6 million active users.",
+        "2": "Trusted by leadership to drive business-critical initiatives and deliver high-impact solutions aligned with company objectives.",
+        "3": "Own end-to-end delivery, from requirements analysis and technical design to release ownership and post-launch support.",
+        "4": "Act as a strategic partner to engineering and business leaders, helping shape priorities, challenge assumptions, and drive informed decisions.",
+        "5": "Apply a strong product mindset by identifying gaps in requirements, uncovering risks early, and ensuring solutions address real customer needs.",
+        "6": "Repeatedly acted as a frontend lead substitute, coordinating priorities and ensuring delivery continuity.",
+        "7": "Independently delivered an internal administration platform within two weeks, quickly ramping up without prior domain knowledge."
+      },
+      "freelance": {
+        "1": "Delivered custom web solutions for small businesses, translating business requirements into scalable and user-friendly digital products.",
+        "2": "Designed and developed a customer-facing website for a barbershop, including integration with the Przelewy24 payment platform."
       }
     }
   },

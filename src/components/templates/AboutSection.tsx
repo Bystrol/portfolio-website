@@ -12,13 +12,7 @@ const unbounded = Unbounded({
   subsets: ['latin']
 })
 
-const technologies: string[] = [
-  'Next.js',
-  'React.js',
-  'Typescript',
-  'Express.js',
-  'Nosql'
-]
+const technologies: string[] = ['Next.js', 'React.js', 'Typescript', 'Node.js']
 
 const containerVariants = {
   hidden: {

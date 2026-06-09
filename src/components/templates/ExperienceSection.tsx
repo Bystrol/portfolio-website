@@ -31,20 +31,30 @@ export const ExperienceSection = () => {
     () => [
       {
         id: 'pirxey',
-        position: 'Frontend Developer',
+        position: 'Frontend Engineer',
         company: 'Widelab/Pirxey',
         companyWebsite: 'https://www.pirxey.com/',
         startDate: '09.2025',
         translationKey: 'pirxey',
-        technologies: ['React', 'Typescript', 'Tailwind', 'AI'],
+        technologies: [
+          'React',
+          'Typescript',
+          'Tailwind',
+          'AI-assisted development'
+        ],
         duties: [
           t('common.experience.duties.pirxey.1'),
-          t('common.experience.duties.pirxey.2')
+          t('common.experience.duties.pirxey.2'),
+          t('common.experience.duties.pirxey.3'),
+          t('common.experience.duties.pirxey.4'),
+          t('common.experience.duties.pirxey.5'),
+          t('common.experience.duties.pirxey.6'),
+          t('common.experience.duties.pirxey.7')
         ]
       },
       {
         id: 'blazity',
-        position: 'Frontend Developer',
+        position: 'Frontend Engineer',
         company: 'Blazity',
         companyWebsite: 'https://blazity.com/',
         startDate: '03.2025',
@@ -58,7 +68,7 @@ export const ExperienceSection = () => {
       },
       {
         id: 'signal',
-        position: 'Frontend Developer',
+        position: 'Frontend Engineer',
         company: 'SignalOS',
         companyWebsite: 'https://www.signalos.io/',
         startDate: '03.2024',
@@ -77,16 +87,14 @@ export const ExperienceSection = () => {
         duties: [
           t('common.experience.duties.signal.1'),
           t('common.experience.duties.signal.2'),
-          t('common.experience.duties.signal.3'),
-          t('common.experience.duties.signal.4'),
-          t('common.experience.duties.signal.5')
+          t('common.experience.duties.signal.3')
         ]
       },
       {
         id: 'mmc',
-        position: 'Frontend Developer',
+        position: 'Frontend Engineer',
         company: 'Mobile Marketing Center',
-        startDate: '01.2023',
+        startDate: '03.2023',
         endDate: '12.2023',
         translationKey: 'mmc',
         technologies: [
@@ -99,11 +107,20 @@ export const ExperienceSection = () => {
         duties: [
           t('common.experience.duties.mmc.1'),
           t('common.experience.duties.mmc.2'),
-          t('common.experience.duties.mmc.3'),
-          t('common.experience.duties.mmc.4'),
-          t('common.experience.duties.mmc.5'),
-          t('common.experience.duties.mmc.6'),
-          t('common.experience.duties.mmc.7')
+          t('common.experience.duties.mmc.3')
+        ]
+      },
+      {
+        id: 'freelance',
+        position: 'Frontend Engineer',
+        company: 'Self-employed',
+        startDate: '04.2021',
+        endDate: '03.2023',
+        translationKey: 'freelance',
+        technologies: ['Next.js', 'Astro', 'Typescript'],
+        duties: [
+          t('common.experience.duties.freelance.1'),
+          t('common.experience.duties.freelance.2')
         ]
       }
     ],
